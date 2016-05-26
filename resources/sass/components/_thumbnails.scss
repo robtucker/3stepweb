@@ -1,0 +1,21 @@
+.thumbnail-article {
+  //to prevent the annoying 1px resize that happens on hover
+  border: 1px solid transparent;
+  overflow: hidden !important;
+  border-radius: $border-radius-lg;
+
+  .caption:hover {
+    color: #333 !important;
+    cursor: pointer;
+    text-decoration: none !important;
+  }
+  &:hover {
+    border-width: 1px;
+    border-color: $gray-border-light !important;
+    //background-color: $coral-green-light;
+    box-shadow: 4px 4px 4px $gray-border-light;
+  }
+
+}
+
+

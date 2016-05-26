@@ -1,0 +1,71 @@
+/**
+ * Modifier .dl-horizontal--dd-right for bootstraps hoz rule.
+ *
+ * This aligns a dt left and the dd far right, useful for pricing lists.
+ *
+ * There's an issue with dl-horizontal base class
+ * that pulls the dl left forcing it out of the container so this
+ * modifier also contains the dl within the parent container.
+ */
+
+.dl-horizontal--dd-right {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    font-size: 0;
+
+    dt, dd {
+        width: 50%;
+        display: inline-block;
+        @extend .font-size-md;
+    }
+
+    dd {
+        text-align: right;
+    }
+}
+
+.bullet-list {
+    color: #1A1A1A;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0px;
+}
+
+
+.striped-list {
+    background: $gray-lightest;
+    font-weight: 400;
+    font-size: 15px;
+    margin: -10px 0px 20px 0px;
+
+    &:nth-child(even) {
+        background: #fff;
+    }
+
+    dt, dd {
+        padding: 10px 15px;
+        font-weight: 400;
+        font-size: 15px !important;
+        box-sizing: border-box;
+        width: calc(50% - 10px);
+        width: -moz-calc(50% - 10px);
+        width: -webkit-calc(50% - 10px);
+        margin: 0px;
+    }
+}
+
+
+.ordered-list {
+    margin-left: 0px;
+    padding-left: 20px;
+
+    li {
+        padding-left: 10px;
+        padding-bottom: 3px;
+
+        &:last-child {
+            padding-bottom: 0px;
+        }
+    }
+}

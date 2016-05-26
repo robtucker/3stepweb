@@ -1,0 +1,23 @@
+.info-box {
+	background: #F8F8F8;
+	padding: 20px;
+
+	h5 {
+		color: $gray-dark;
+	}
+
+	ol {
+		color: #7A7A7A;
+		margin-left: 0px;
+		padding-left: 20px;
+
+		li {
+			padding-left: 10px;
+			padding-bottom: 3px;
+
+			&:last-child {
+				padding-bottom: 0px;
+			}
+		}
+	}
+}

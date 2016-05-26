@@ -1,0 +1,37 @@
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.center-y {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@include media-breakpoint-up(md) {
+  .full-screen-height-except-mobile {
+    min-height: 100vh;
+  }
+}
+
+
+.flex-vertical-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.z-index-high {
+  z-index: 9;
+}

@@ -1,0 +1,13 @@
+.textarea-lg {
+  @extend .font-size-md;
+  min-height: 400px;
+}
+
+
+
+textarea { resize:both; } /* none|horizontal|vertical|both */
+textarea.vert { resize:vertical; }
+
+[contenteditable=true]:empty:not(:focus):before{
+  content:attr(data-text)
+}

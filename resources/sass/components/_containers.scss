@@ -1,0 +1,10 @@
+.container {
+
+	&.container--drop {
+		margin-top: 30px;
+	}
+
+    &.container--small {
+        max-width: 480px;
+    }
+}

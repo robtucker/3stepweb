@@ -1,0 +1,32 @@
+.styled-checkbox {
+  display: inline-block;
+  width: $checkbox-size;
+  height: $checkbox-size;
+  position: relative;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: $checkbox-radius;
+    background: #fff;
+    border: 1px solid $gray-lighter;
+
+    &:hover {
+      border-color: #ccc;
+      background: #F5F5F5;
+      cursor: pointer;
+    }
+  }
+
+  input[type="checkbox"]:checked + label {
+    background: url(/img/icons/checkbox-tick.svg) no-repeat center #2C4DF7;
+    border: 1px solid rgba(0,0,0,0.25);
+  }
+}

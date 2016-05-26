@@ -1,0 +1,69 @@
+.Sidebar {
+
+	@include e(header) {
+		font-size: 15px;
+		color: $gray-dark;
+		font-weight: 500;
+
+		@include m(light) {
+			font-weight: 400;
+			color: $gray;
+		}
+	}
+
+	@include e(process) {
+		position: relative;
+		width: 100%;
+		height: 3px;
+		border-radius: 99em;
+		background: #E5EFF3;
+		margin: 20px 0px;
+		overflow: hidden;
+
+		@include e(percentage) {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			height: 100%;
+			width: 0%;
+			background-color: $brand-primary;
+			border-radius: 99em;
+		}
+	}
+
+	@include e(links) {
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+
+		li {
+			display: block;
+			font-size: 16px;
+			margin: 0 0 5px 0;
+
+			a {
+				color: $gray;
+				text-decoration: none;
+			}
+
+			&.active {
+				a {
+					color: $brand-primary;
+					font-weight: 500;
+				}
+			}
+
+			&:hover {
+				color: $gray;
+			}
+
+			&.completed {
+				a {
+					color: $brand-primary;	
+				}
+			}
+		}
+	}
+
+
+}

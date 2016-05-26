@@ -1,0 +1,98 @@
+.form-control {
+  display: block;
+  height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  font-size: 16px;
+  border-radius: $input-border-radius;
+  -webkit-border-radius: $input-border-radius;
+  -moz-border-radius: $input-border-radius;
+  border: 1px solid $input-border-color;
+  box-shadow: none;
+
+  @include placeholder {
+    color: $input-color-placeholder;
+  }
+
+  &:focus {
+    border-color: $input-border-focus;
+  }
+
+  &:active {
+    outline: none;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  &[disabled], .disabled {
+      background-color: $gray-lightest;
+      border-color: $gray-lightest;
+      color: $gray-light;
+      cursor: not-allowed;
+  }
+}
+
+.form-control-label {
+  font-size: 14px;
+  display: block;
+  margin: 5px 0 5px 0;
+  padding: 0px;
+  color: $gray-dark;
+  text-align: left;
+
+  &.dark {
+    color: $gray-dark;
+  }
+
+  &.smaller {
+    font-size: 13px;
+  }
+}
+
+.input-group {
+    width: 100%;
+
+    .input-group-addon {
+        color: #AAAAAA;
+        background: #F5F5F5;
+
+        &.small {
+            width: 58px;
+        }
+    }
+}
+
+.inline-inputs {
+    display: flex !important;
+    display: -webkit-flex !important;
+
+    .form-control {
+        border-right: none;
+        text-align: center;
+
+        &:last-child {
+            border-right: 1px solid $input-border-color;
+        }
+    }
+
+}
+.textarea-no-resize {
+  resize: none;
+}
+
+.input-boxed {
+  display: inline-block;
+  padding: 10px 20px;
+  background: $brand-secondary;
+  color: $brand-primary;
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  margin-right: 10px;
+}
+
+label.file {
+  width: 100%;
+}
+

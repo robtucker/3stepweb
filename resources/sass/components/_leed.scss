@@ -1,0 +1,25 @@
+.Leed {
+	padding: 30px;
+
+	h5 {
+		margin: 0px;
+		font-weight: 400;
+	}
+
+	h2 {
+		margin: 3px 0 0 0;
+	}
+
+
+	@include m(primary) {
+		background-color: $header-color;
+
+		h2 {
+			color: #fff;
+		}
+
+		h5 {
+			color: rgba(#fff, 0.75);
+		}
+	}
+}

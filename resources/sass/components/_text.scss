@@ -1,0 +1,116 @@
+h1 {
+  font-weight: 600;
+}
+
+a {
+  @extend .text-color-primary;
+}
+
+.capitalise {
+  text-transform: uppercase;
+}
+
+.text-ucfirst::first-letter {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.font-size-sm {
+  font-size: $font-size-sm;
+}
+.font-size-md {
+  font-size: $font-size-base;
+}
+.font-size-ml {
+  font-size: $font-size-base + .25;
+}
+.font-size-lg {
+  font-size: $font-size-lg;
+}
+.font-size-xl {
+  font-size: $font-size-xl;
+}
+.font-size-xxl {
+  font-size: $font-size-xxl;
+}
+
+.font-weight-normal {
+  font-weight: normal;
+}
+.font-weight-bold {
+  font-weight: 600;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.text-hover-white {
+  &:hover {
+    color: #fff;
+  }
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-left {
+  text-align: left !important;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 4.5em;
+  font-weight: 700;
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+.text-spaced-xs {
+  letter-spacing: 1px;
+}
+
+.text-spaced-sm {
+  letter-spacing: 2px;
+}
+
+.text-spaced-md {
+  letter-spacing: 3px;
+}
+
+.text-color-red {
+  color: $red !important;
+}
+
+.text-color-green {
+  color: $green !important;
+}
+
+.text-color-ppLightBlue {
+  color: $ppLightBlue;
+}
+
+.text-color-ppNavyBlue {
+  color: $ppNavyBlue;
+}

@@ -1,0 +1,86 @@
+.Footer {
+    width: 100%;
+    border-top: 1px solid $gray-lightest;
+    padding: 50px 0px 30px 0px;
+
+    @include e(logo) {
+        font-size: 14px;
+        text-decoration: none;
+        font-weight: 500;
+        color: $gray;
+        display: block;
+        margin: 0 0 17px 0;
+
+        &:hover {
+            text-decoration: none;
+            color: lighten($gray, 5%);
+        }
+    }
+
+    @include e(copy) {
+        font-size: 12px;
+        color: $gray;
+        line-height: 17px;
+        margin: 0px;
+        padding: 0px;
+        max-width: 482px;
+    }
+
+
+    @include e(links) {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        text-align: right;
+
+        li {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 30px;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+
+            a {
+                font-size: 14px;
+                color: $gray;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: lighten($gray, 5%);
+                }
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            text-align: left;
+            margin-top: 40px;
+        }
+    }
+}
+
+.footer-minimal {
+    margin: 50px 0 0 0;
+    font-size: 12px;
+    color: $gray;
+    line-height: 17px;
+    padding: 0px;
+}
+
+.footer-basic-centered{
+  font: normal 18px sans-serif;
+  min-height: $footerHeight;
+  margin-top: -$footerHeight;
+}
+
+.footer-basic-centered .footer-links a{
+  display:inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.padding-bottom-footer {
+  padding-bottom: $footerHeight;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="height-full">
+<head lang="en">
+
+    <!--<script>-->
+        <!--var ppGetStyleheet = function(name) {-->
+            <!--var ppStyleSheetLookup = {-->
+                <!--testing: 'default',-->
+                <!--atlantis: 'default',-->
+                <!--blake: 'default'-->
+            <!--};-->
+
+
+            <!--var ppStyle = document.createElement("link");-->
+            <!--ppStyle.setAttribute("rel", "stylesheet");-->
+            <!--ppStyle.setAttribute("type", "text/css");-->
+            <!--ppStyle.setAttribute("href", '/css/' + name + '.css');-->
+
+            <!--return false;-->
+        <!--};-->
+
+        <!--var ppStyleMain = ppGetStyleheet(location.host.split('.')[0]);-->
+        <!--if(!ppStyleMain) {-->
+            <!--var ppStyleFallback = ppGetStyleheet('default');-->
+            <!--if(!ppStyleFallback) console.error('No stylesheet could be found');-->
+        <!--}-->
+    <!--</script>-->
+    <!---->
+    <link rel="stylesheet" href="/css/default.css">
+    <meta charset="UTF-8">
+    <title>PeerPay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PeerPay: trusted financing for business">
+    <meta name="author" content="PeerPay.uk">
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/rocket.png">
+
+    <!-- required for html 5 mode  -->
+    <base href="/" />
+</head>
+<body ng-app="pp.main" pp-listener class="height-full">
+    <div id="container" class="height-full">
+        <div id="content" class="min-height-full">
+            <div id="main" class="padding-bottom-footer">
+
+                <pp-navbar ng-show="showNav()"></pp-navbar>
+
+                <!-- flash messages -->
+                <mc-messages></mc-messages>
+
+                <!-- Application -->
+                <ui-view></ui-view>
+
+            </div>
+        </div>
+
+        <pp-footer ng-show="showFooter()"></pp-footer>
+    </div>
+
+    <!-- CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.2.0/lodash.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.4.9/angular-messages.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.17/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/core-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/aes-min.js"></script>
+
+    <!-- compiled vendors -->
+    <script src="js/vendors.js"></script>
+    <!-- core -->
+    <script src="/js/pp-main.js"></script>
+</body>
+</html>

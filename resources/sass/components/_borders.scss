@@ -1,0 +1,48 @@
+//global borders
+.border-bottom-light {
+  border-bottom: $border-light
+}
+.border-top-light {
+  border-top: $border-light
+}
+.border-light {
+  border: $border-light
+}
+
+// border width
+.border-width-thick {
+  border-width: $border-width-lg !important;
+}
+
+.border-width-thin {
+  border-width: $border-width-sm !important;
+}
+
+//border radius
+.border-radius-sm {
+  border-radius: $border-radius-sm;
+}
+
+.border-radius-md {
+  border-radius: $border-radius-base;
+}
+
+.border-radius-lg {
+  border-radius: $border-radius-lg;
+}
+
+.border-radius-circle {
+  border-radius: 100%;
+}
+
+.borderless {
+  border: 0;
+}
+
+.border-white {
+  border-color: #fff;
+}
+
+.border-lightgrey {
+  border: 1px solid lightgray;
+}

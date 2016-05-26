@@ -1,0 +1,48 @@
+// SIMPLE MASONRY LAYOUT
+// floats are forbidden so don't put it inside a bootstrap col - just put it straight inside the row
+
+@media (min-width: $screen-sm-min) {
+  .tiles {
+    -moz-column-count: 2;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 10px;
+    column-count: 2;
+    column-gap: 10px;
+    width: 480px;
+  }
+
+}
+
+@media (min-width: $screen-md-min) {
+  .tiles {
+    -moz-column-count: 3;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 10px;
+    column-count: 3;
+    column-gap: 10px;
+    width: 480px;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .tiles {
+    -moz-column-count: 4;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 10px;
+    column-count: 4;
+    column-gap: 10px;
+    width: 480px;
+  }
+}
+
+.tiles {
+  .tile {
+    display: inline-block;
+    float: none;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}

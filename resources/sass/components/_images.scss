@@ -1,0 +1,37 @@
+.img-thumbnail-lg {
+  height: $thumbnail-image-lg;
+  @extend .full-width;
+}
+
+.img-thumbnail-md {
+  height: $thumbnail-image-md;
+  @extend .full-width;
+}
+
+.img-thumbnail-sm {
+  height: $thumbnail-image-sm;
+  width: $thumbnail-image-sm;
+}
+
+.img-banner-height {
+  height: 400px;
+}
+
+.img-background-fit {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-logo-manager {
+  background-image: $manager-logo;
+}
+
+.img-postbox {
+  background-image: url(/img/postbox.png);
+}
+
+.img-handshake {
+  /*background: url(/img/handshake-business3.jpg);*/
+  background: url('/img/device-to-device-shake.png');
+}
