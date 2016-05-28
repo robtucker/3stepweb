@@ -1,0 +1,3 @@
+---
+- name: Install node
+  apt: pckg="nodejs"

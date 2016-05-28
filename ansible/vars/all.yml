@@ -1,0 +1,37 @@
+---
+server:
+    install: '1'
+    packages: [vim, git, zsh  ]
+    timezone: UTC
+    locale: en_US.UTF-8
+app:
+    name: 3stepweb
+    dir: "/var/www/3stepweb"
+    public_dir: "/var/www/3stepweb/public"
+    env: "local"
+python:
+    version: '3.4'
+    venv:  "/var/www/3stepweb/venv"
+nginx:
+    install: '1'
+    docroot: /vagrant
+    servername: 3stepweb.loc
+mysql:
+    install: '1'
+    root_password: root
+    database: 3stepweb
+    user: root
+    password: root
+redis:
+    install: '1'
+    port: '6379'
+rabbitmq:
+    install: '1'
+    user: user
+    password: password
+elasticsearch:
+    install: '1'
+    port: '9200'
+    version: 1.5.2
+xdebug:
+    install: '1'

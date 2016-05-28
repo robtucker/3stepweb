@@ -1,0 +1,57 @@
+---
+- name: Update apt
+  apt: update_cache=yes
+
+- name: Install System Packages
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - curl
+    - wget
+    - python-software-properties
+    - language-pack-id
+
+- name: Install Extra Packages
+  apt: pkg={{ item }} state=latest
+  with_items: server.packages
+  when: server.packages is defined
+
+- name: Configure the timezone
+  template: src=timezone.tpl dest=/etc/timezone
+
+- name: More Configure the timezone
+  file: src=/usr/share/zoneinfo/{{server.timezone}} dest=/etc/localtime state=link force=yes backup=yes
+
+- name: Clone oh-my-zsh repo
+  become: yes
+  become_user: vagrant
+  git: repo=git://github.com/robbyrussell/oh-my-zsh.git
+       dest=~/.oh-my-zsh
+
+- name: Create a new zsh config from the template in the repo
+  become: yes
+  become_user: vagrant
+  command: cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+  register: zsh_template_copied
+
+# Following command doesn't work, because it requires a password from the user...
+# - name: Set ZSH as default shell
+#   command: chsh vagrant -s /bin/zsh
+
+- name: Set zsh as default shell
+  user: name=vagrant shell=/usr/bin/zsh
+  when: zsh_template_copied
+
+
+# This method hasn't been working
+- name: Set default system language pack
+  become: yes
+  become_user: vagrant
+  shell: locale-gen {{server.locale}}
+
+#- name: Set default system language pack
+#  become: yes
+#  become_method: sudo
+#  environment:
+#    LC_ALL: "en_US.UTF-8"
+#    LC_CTYPE="en_US.UTF-8"
+#  shell: "dpkg-reconfigure locales"

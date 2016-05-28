@@ -1,0 +1,23 @@
+---
+- name: Install pip
+  apt: pkg={{ item }} state=installed update_cache=yes
+  tags: [packages]
+  with_items:
+    - python3-pip
+    - python3-dev
+  register: pip_install
+
+- name: Install virtualenv
+  pip: executable=/usr/bin/pip3
+       name=virtualenv
+  when: pip_install|success
+  register: virtualenv_install
+
+- name: Initiate virtualenv
+  become: yes
+  become_user: vagrant
+  pip: executable=/usr/bin/pip3
+       virtualenv="{{ python.venv }}"
+       virtualenv_python=/usr/bin/python{{ python.version}}
+       requirements={{ app.dir }}/requirements.txt
+  when: virtualenv_install|success

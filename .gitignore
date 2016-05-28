@@ -5,7 +5,7 @@
 
 /node_modules
 /resources/bower*
-/bower_components
+bower_components
 
 /config/env/*
 !/config/env/globals.json

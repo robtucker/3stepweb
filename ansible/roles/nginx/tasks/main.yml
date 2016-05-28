@@ -1,0 +1,20 @@
+---
+- name: Install Nginx
+  become: yes
+  become_method: sudo
+  apt: pkg=nginx state=latest update_cache=yes
+
+- name: Change default nginx conf
+  become: yes
+  become_method: sudo
+  template: src=nginx.conf dest=/etc/nginx.conf
+  notify: restart nginx
+
+- name: Add nginx site conf
+  become: yes
+  become_method: sudo
+  template: src=site.conf dest=/etc/nginx/sites-available/{{app.name}}.conf
+
+- name: Enable nginx symlink
+  file: src=/etc/nginx/sites-available/{{app.name}}.conf dest=/etc/nginx/sites-enabled/{{app.name}}.conf state=link
+  notify: restart nginx
