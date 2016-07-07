@@ -1,6 +1,0 @@
-@mixin absolute-vertical ($inner-element-height) {
-  height: $inner-element-height;
-  margin-top: -$inner-element-height;
-  position: absolute;
-  top: 50%;
-}

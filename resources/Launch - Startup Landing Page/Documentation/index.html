@@ -1,0 +1,911 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet'>
+	<meta charset="utf-8">
+	
+	<title>launch - Startup Landing Page - Documentation</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="Pixininja">
+	<meta name="copyright" content="Pixininja">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2014-04-15T17:18:01+02:00">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css" media="screen">
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+  <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+   <!-- <link rel="stylesheet" href="assets/js/google-code-prettify/desert.css" media="screen"> -->
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+	
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+  body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+		html{background-color:#fff;color:#1C140D;}
+		::-moz-selection{background:#42A5F5;color:#fff;}
+		::selection{background:#42A5F5;color:#fff;}
+		#documenter_sidebar #documenter_logo{background-image:url(img/logo-head.png);}
+		a{color:#42A5F5;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #CBE86B, #889C48);
+			  background-image: -ms-linear-gradient(top, #CBE86B, #889C48);
+			  background-image: -webkit-gradient(linear, 0 0, 0 CBE86B%, from(#F2E9E1), to(#889C48));
+			  background-image: -webkit-linear-gradient(top, #CBE86B, #889C48);
+			  background-image: -o-linear-gradient(top, #CBE86B, #889C48);
+			  background-image: linear-gradient(top, #CBE86B, #889C48);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CBE86B', endColorstr='#889C48', GradientType=0);
+			  border-color: #889C48 #889C48 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #CBE86B #CBE86B #bfbfbf;
+		  background-color: #889C48;
+		}
+		hr{border-top:1px solid #CCCCCC;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#444A59;color:#1C140D;}
+		/* #documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #FFF6ED;-moz-text-shadow:1px 1px 0px #FFF6ED;text-shadow:1px 1px 0px #FFF6ED;} */
+		/* #documenter_sidebar ul{border-top:1px solid #fff;} */
+		#documenter_sidebar ul a{border-top: 1px solid #696D73;border-bottom:none;color:#fff; font-size: 14px;
+font-weight: 400;}
+    #documenter_nav li:first-child a { border-top: none; }
+		#documenter_sidebar ul a:hover{background: #42A5F5;
+color: #FFFFFF;
+border-top: 1px solid #42A5F5;}
+		#documenter_sidebar ul a.current{background: #64B5F6;
+color: #FFFFFF;
+border-top: 1px solid #64B5F6;
+font-weight: 300;}
+		#documenter_copyright{display:none !important;visibility:visible !important;}
+    .prettyprint, .o-f { overflow-x: scroll; }
+	</style>
+	
+</head>
+<body class="documenter-project-launch">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#which_code_editor_for_editing_files" title="Which code editor for editing files?">Which code editor for editing files?</a></li>
+			<li><a href="#how_to_change_logo" title="How to change logo?">How to change logo?</a></li>
+
+
+      			<li><a href="#how_to_change_background_image" title="How to change Background image?">How to change Background image?</a></li>
+            <li><a href="#how_to_change_background_video" title="How to change Background video?">How to change Background video?</a></li>
+            <li><a href="#feature-image" title="How to change Feature Image?">How to change Feature Image?</a></li>
+            <li><a href="#how_to_edit_the_counter" title="How to Edit the counter?">How to Edit the counter?</a></li>
+      			<!-- <li style="display: none;"><a href="#how_to_change_background_slideshow_images" title="How to change Background slideshow images?">How to change Background slideshow images?</a></li> -->
+            <li><a href="#how_to_edit_the_map" title="How to Edit the map?">How to Edit the map?</a></li>
+            <li><a href="#how_to_integrate_your_mailchimp_to_subscribe_form" title="How to integrate your mailchimp to subscribe form?">How to integrate your mailchimp to subscribe form?</a></li>
+            <li><a href="#how_to_change_Twitter_feed" title="How to change Twitter feed?">How to change Twitter feed?</a></li>
+      <li><a href="#how_to_get_the_contact_form_working" title="How to get the contact form working?">How to get the contact form working</a></li>    
+       <li><a href="#how_to_change_video_youtube_vimeo" title="How to change video (youtube/vimeo)?">How to change video (youtube/vimeo)?</a></li>     
+			
+
+<li><a href="#multi_language_setup" title="Multi-language Setup">Multi-language Setup</a></li>
+      
+			<li><a href="#how_to_change_social_media" title="How to change social media?">How to change social media?</a></li>
+     <li><a href="#boot" title="bootstrap customize">Bootstrap customize</a></li>
+			<li><a href="#credits" title="Credits">Credits</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Pixininja 2014<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>Launch - Startup Landing Page</h1>
+	<h2>Documentation</h2>
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+	
+	
+	<li>by: Pixininja</li>
+	<li><a href="http://csmthemes.com/themes/launch/">csmthemes.com/themes/launch/</a></li>
+	<!-- <li style="display:none;">email: <a href="mailto:&#99;&#115;&#109;&#116;&#104;&#101;&#109;&#101;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#99;&#115;&#109;&#116;&#104;&#101;&#109;&#101;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li> -->
+	</ul>
+	<p></p>
+	</section>
+	
+	<section id="which_code_editor_for_editing_files">
+	<div class="page-header"><h3>Which code editor for editing files?</h3><hr class="notop"></div>
+<div>
+	You can use sublime text 3 or brackets for editing the code.</div>
+  <div>
+	&nbsp;</div>
+  <div class="alert alert-info">
+	<i class="fa fa-info-circle"></i> Download link :<br> http://www.sublimetext.com/3<br> http://brackets.io/</div>
+<!-- <div>
+	Download link : http://www.sublimetext.com/3 <br> http://brackets.io/</div> -->
+</section>
+<section id="how_to_change_logo">
+	<div class="page-header"><h3>How to change logo?</h3><hr class="notop"></div>
+<div>
+	Open the img folder and replace the logo-nav.svg and logo-head.svg with your logo.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="img/logo.jpg"></div>
+<div>
+	&nbsp;</div>
+<div>
+	Open the index.html file in your code editor.&nbsp;</div>
+  <div>
+	&nbsp;</div>
+<div>
+	Go to line no 30 and edit the site description (alt tag ).</div>
+</section>
+
+
+<section id="how_to_change_background_image">
+	<div class="page-header"><h3>How to change Background image?</h3><hr class="notop"></div>
+<p>
+	To change the image go to img folder and replace bg.jpg, bg-pricing.jpg and bg-video-preview.jpg</p>
+<div class="alert alert-info">
+ <p><i class="fa fa-info-circle"></i> Tip: Use https://tinypng.com/ to compress your images.</p></div>
+</section>
+<section id="how_to_change_background_video">
+	<div class="page-header"><h3>How to change Background video?</h3><hr class="notop"></div>
+<div>
+	To change the background video go to video folder and replace the 2 videos which are named as vb.mp4 and vb.webm.</div>
+<div>
+	&nbsp;</div>
+<div class="alert alert-info">
+<i class="fa fa-info-circle"></i> The the videos are the same but different formats which is requied. To get a video converter visit<!-- &nbsp; <br>
+	  &nbsp;<br> -->
+  http://www.mirovideoconverter.com/</div>
+
+  <p>Open the video folder and replace the poster.jpg with a image which is the first frame of the video or with the image of your choice. </p>
+  </section>
+  
+  <section id="feature-image">
+	<div class="page-header"><h3>How to change Feature image?</h3><hr class="notop"></div>
+<p><img src="img/feature-1.png" alt="" width="50%"></p>
+
+<div class="alert alert-info">
+	<p><i class="fa fa-info-circle"></i> Important: Feature image sould be 1000x575 for things to work properly</p></div>
+  <div>
+	&nbsp;</div>
+  <div class="alert alert-error"><p><i class="fa fa-exclamation-triangle"></i> Note: You have to do the step below only if the image dosen't fit properly.</p></div>
+  <p>If you want to use any other image size and the image doesen't fit properly you need to change a few numbers to adjust the image properly. </p>
+  <p>Open main.css which can be found inside css folder. Go to line no 965, you will need to make the changes here</p>
+  
+<p>  <code>.features img {
+  max-width: none;
+  position: absolute;
+  width: 900px;
+  top: 0;
+  left: 22px;
+}</code>
+<br>
+Change width: 900px; and left: 22px;. This represents the two image on the right. Width is for the image's width and left the position left property. max-width: none; makes the image stretch to its full width.
+
+</p>
+
+<p><code>
+.features div[class="row"]:nth-child(2) .col-md-7 img { left: -277px; }</code>
+<br>
+Change left: -277px;. This represents the image on the left. Left is the position left property.
+</p>
+
+  
+  
+
+
+  </section>
+  
+<section id="how_to_edit_the_counter">
+	<div class="page-header"><h3>How to Edit the counter?</h3><hr class="notop"></div>
+  &nbsp;
+<div>
+	Open the main.js file in your code editor.&nbsp;</div>
+  &nbsp;
+<div>
+	<img alt="" src="img/counter.jpg"></div>
+  &nbsp;
+<div>
+	Go to line no 78 and change the numbers to your desired value.</div>
+</section>
+
+<section id="how_to_edit_the_map">
+	<div class="page-header"><h3>How to Edit the map?</h3><hr class="notop"></div>
+<div>
+	Go to js folder and open the gmaps.js file in your code editor.&nbsp;</div>
+  &nbsp;
+<div>
+	<img alt="" src="img/map.jpg"></div>
+  <div>
+	&nbsp;</div>
+<div>
+	change coordinates on line number 1.
+</div>
+&nbsp;
+<div>
+	change zoom on line number 7</div>
+  &nbsp;
+  <div>
+	change address details on line number 18</div>
+   &nbsp;
+<div>
+	change title on line number 35</div>
+  &nbsp;
+<div class="alert alert-info">
+	<i class="fa fa-info-circle"></i> Map can be found at https://www.google.com/maps/</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+</section>
+<section id="how_to_integrate_your_mailchimp_to_subscribe_form">
+	<div class="page-header"><h3>How to integrate your mailchimp to subscribe form?</h3><hr class="notop"></div>
+<div>
+	Open the main.js file in your code editor.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="img/form.jpg"></div>
+  <div>
+	&nbsp;</div>
+<div>
+	Go to line <strong>no 12</strong>, changes needs to be made here : <div>
+	&nbsp;</div> <strong> <div class="alert alert-info"><i class="fa fa-info-circle"></i> http://csmthemes.us3.list-manage.com/subscribe/post?u=9666c25a337f497687875a388&id=5b881a50fb</div> </strong></div>
+
+
+<div>
+	&nbsp;</div>
+<div>
+	You need to change three value<strong> </strong></div>
+<div>
+	<strong>csmthemes.us3</strong></div>
+<div>
+	<strong>u=9666c25a337f497687875a388</strong></div>
+<div>
+	<strong>id=fa41845374</strong></div>
+<div>
+	&nbsp;</div>
+
+
+  
+  <div>
+  <h3>Watch Video Tutorial</h3>
+  <div>
+	&nbsp;</div>
+  <video width="1000" height="700" controls>
+  <source src="assets/mailchimp.mp4" type="video/mp4">
+Your browser does not support the video tag. Download the video from assets folder
+</video>
+  
+  </div>
+      <div>
+	&nbsp;</div>
+  <div class="alert alert-error"><i class="fa fa-info-circle"></i> Learn more about mailchimp http://kb.mailchimp.com/video-index</div>
+</section>
+
+<section id="how_to_change_Twitter_feed">
+	<div class="page-header"><h3>How to change Twitter feed?</h3><hr class="notop"></div>
+  <div>
+	&nbsp;</div>
+<!-- <div>
+	<img alt="" src="img/twitter.jpg"></div> -->
+  <pre class="prettyprint linenums:35"><div>&nbsp; &nbsp; $(&#39;.tweet&#39;).twittie({</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &nbsp; username: &#39;envatomarket&#39;, // change username here</div>
+</pre>
+
+  <h3><strong>Step 1</strong></h3>
+<div>
+	Open the main.js file in your code editor.&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	Go to line no 35.</div>
+<div>
+	Change <b>envatomarket</b> to your username.</div>
+   <div>
+	&nbsp;</div>
+  <h3><strong>Step 2</strong></h3>
+  
+  <div>
+	<img alt="" src="img/twitter1.jpg"></div>
+  <div>
+	&nbsp;</div>
+  <div>
+	<img alt="" src="img/twitter2.jpg"></div>
+  <div>
+	&nbsp;</div>
+  <div>
+	<img alt="" src="img/twitter3.jpg"></div>
+  
+  <div>
+	&nbsp;</div>
+  <div>
+	<strong>A)</strong> First, you need a consumer key and secret keys. Get one from https://dev.twitter.com/apps</div>
+  
+  <div>
+	&nbsp;</div>
+  
+  <div>
+	<strong>B)</strong> Open the api folder and edit config.php file and replace variables with your Consumer and oAuth Keys on line number 6 and 10.
+
+<pre class="prettyprint linenums:6">    // Consumer Key
+    define('CONSUMER_KEY', 'CONSUMER_KEY_HERE');
+    define('CONSUMER_SECRET', 'CONSUMER_SECRET_HERE');
+
+    // User Access Token
+    define('ACCESS_TOKEN', 'ACCESS_TOKEN_HERE');
+    define('ACCESS_SECRET', 'ACCESS_SECRET_HERE');</pre></div>
+    
+    <div class="alert alert-info">
+	<i class="fa fa-info-circle"></i> Plugin doc https://github.com/sonnyt/Tweetie</div>
+  <div>
+	&nbsp;</div>
+  <div class="alert alert-error">
+	<i class="fa fa-exclamation-triangle"></i> You need a webhost for this to work.</div>
+    
+</section>
+
+<section id="how_to_get_the_contact_form_working">
+	<div class="page-header"><h3>How to get the contact form working?</h3><hr class="notop"></div>
+      <div>
+	&nbsp;</div>
+<div>
+	Open php folder, inside the php folder open contact.php file in your code editor.</div>
+      <div>
+	&nbsp;</div>
+<!-- <div>
+	<img alt="" src="img/contact.jpg"></div> -->
+  <pre class="prettyprint linenums:11"><div>&nbsp; &nbsp; // Enter the email where you want to receive the message</div><div>
+	&nbsp; &nbsp; $emailTo = &#39;pixininja@csmthemes.com&#39;;</div>
+</pre>
+      <div>
+	&nbsp;</div>
+<div>
+	Go to line no 12 and change the email address to your email address.</div>
+      <div>
+	&nbsp;</div>
+<div class="alert alert-error">
+	<i class="fa fa-exclamation-triangle"></i> IMPORTANT: Use a domain email to recieve mails, it won&#39;t work with any other email address. Example, if your domain is abc.com your email address will be &#110;&#97;&#109;&#101;&#64;&#97;&#98;&#99;&#46;&#99;&#111;&#109;</div>
+</section>
+<!-- <section id="how_to_change_Twitter_feed">
+	<div class="page-header"><h3>How to change Twitter feed?</h3><hr class="notop"></div>
+<div>
+	<img alt="" src="img/twitter.jpg"></div>
+<div>
+	&nbsp;</div>
+  <h3>Step 1</h3>
+<div>
+	Open the main.js file in your code editor.&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	Go to line no 34.</div>
+<div>
+	Change envatomarket to your username.</div>
+  <h3>Step 2</h3>
+  
+  <div>
+	<img alt="" src="img/twitter1.jpg"></div>
+  <div>
+	&nbsp;</div>
+  <div>
+	<img alt="" src="img/twitter2.jpg"></div>
+  <div>
+	&nbsp;</div>
+  <div>
+	<img alt="" src="img/twitter3.jpg"></div>
+  
+  <div>
+	&nbsp;</div>
+  <div>
+	First, you need a consumer key and secret keys. Get one from https://dev.twitter.com/apps</div>
+  
+  <div>
+	&nbsp;</div>
+  
+  <div>
+	Edit api/config.php file and replace variables with your Consumer and oAuth Keys.
+
+<pre>    // Consumer Key
+    define('CONSUMER_KEY', 'CONSUMER_KEY_HERE');
+    define('CONSUMER_SECRET', 'CONSUMER_SECRET_HERE');
+
+    // User Access Token
+    define('ACCESS_TOKEN', 'ACCESS_TOKEN_HERE');
+    define('ACCESS_SECRET', 'ACCESS_SECRET_HERE');</pre></div>
+    
+    <div class="alert alert-info">
+	<i class="fa fa-info-circle"></i> Plugin doc https://github.com/sonnyt/Tweetie</div>
+  <div>
+	&nbsp;</div>
+  <div class="alert alert-error">
+	<i class="fa fa-exclamation-triangle"></i> You need a webhost for this to work.</div>
+    
+</section> -->
+
+
+
+<section id="how_to_change_video_youtube_vimeo">
+	<div class="page-header"><h3>How to change Video Modal (youtube/vimeo)</h3><hr class="notop"></div>
+<div>
+	Open the index.html file in your code editor.&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="img/video.jpg"></div>
+  <div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="img/video2.jpg"></div>
+<div>
+	&nbsp;</div>
+<div>
+	Go to line on 56 and 184</div>
+  <div>
+	&nbsp;</div>
+<div>
+	For vimeo video change the href=&quot;<b>https://vimeo.com/109054393</b>&quot; to the video of your need. [change&nbsp;</div>
+<div>
+	https://vimeo.com/109054393 ]</div>
+  <div>
+	&nbsp;</div>
+<div>
+	For youtube video change the href=&quot;<b>http://vimeo.com/90536368</b>&quot; to the youtube video of your need.</div>
+        <div>
+	&nbsp;</div>
+    <div class="alert alert-info">
+	<i class="fa fa-info-circle"></i> Plugin doc http://dimsemenov.com/plugins/magnific-popup/documentation.html</div>
+  <div>
+	&nbsp;</div>
+  <div class="alert alert-error">
+	<i class="fa fa-exclamation-triangle"></i> You need a webhost for this to work.</div>
+</section>
+
+	<section id="multi_language_setup">
+	<div class="page-header"><h3>Multi-language Setup</h3><hr class="notop"></div>
+<div class="alert alert-error">
+	<i class="fa fa-exclamation-triangle"></i> More details about the plugin can be found here https://github.com/Irrelon/jquery-lang-js</div>
+<h1>&nbsp;
+	</h1>
+<h1>
+	STEP 1 :&nbsp;Defining which elements to translate</h1>
+<p>
+	Add &quot;lang&quot; attribute <strong>[ lang=&quot;en&quot; ] </strong>to the HTML element which needs translation.</p>
+<p>&nbsp;
+	</p>
+<pre class="prettyprint lang-html linenums">
+EXAMPLE: 
+
+
+&lt;span lang=&quot;en&quot;&gt;Translate me&lt;/span&gt;
+
+
+OR
+
+
+&lt;select name=&quot;testSelect&quot;&gt;
+
+    &lt;option lang=&quot;en&quot; value=&quot;1&quot;&gt;An option phrase to translate&lt;/option&gt;
+
+    &lt;option lang=&quot;en&quot; value=&quot;2&quot;&gt;Another phrase to translate&lt;/option&gt;
+
+&lt;/select&gt;
+
+
+OR
+
+Button elements
+
+&lt;button lang=&quot;en&quot;&gt;Some button text&lt;/button&gt;
+
+
+OR
+
+Placeholder text
+
+&lt;input type=&quot;text&quot; placeholder=&quot;my placeholder text&quot; lang=&quot;en&quot; /&gt;</pre>
+<p>&nbsp;
+	</p>
+<div class="alert alert-error">
+	<i class="fa fa-exclamation-triangle"></i> Note: lang=&quot;en&quot; has already been add to most of the HTML element. If you need to add any new element follow the above procedure.</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<h1>
+	STEP 2 : Adding the country to dropdown list</h1>
+
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="img/lang-drop.png"></div>
+  <div>
+	&nbsp;</div>
+<div>
+	In the index.html go to line no 29 and add the links of the language required.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="img/lang-html.jpg"></div>
+<div>
+	&nbsp;</div>
+  <div>
+	&nbsp;</div>
+<div>
+	Find the required country link from the list below and add it to line no 29....or below</div>
+<div>
+	&nbsp;</div>
+<h3>
+	Example:&nbsp;</h3>
+<div>
+	&nbsp;</div>
+<div class="alert alert-info o-f">
+	 <span style="font-family: monospace; line-height: 19px; white-space: pre;"><i class="fa fa-info-circle"></i> &lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;cz&#39;); return false;&quot; title=&quot;Czech&quot; data-lang-id=&quot;cz_CZ&quot;&gt;&lt;img src=&quot;img/flags/cz.png&quot; alt=&quot;Czech Republic&quot;&gt; Če&scaron;tina&lt;/a&gt;&lt;/li&gt;</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<pre class="prettyprint lang-html linenums">
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;ca&#39;); return false;&quot; title=&quot;Catalan&quot; data-lang-id=&quot;ca_ES&quot;&gt;&lt;img src=&quot;img/flags/catalonia.png&quot; alt=&quot;Catalonia&quot;&gt; Catal&agrave;&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;cz&#39;); return false;&quot; title=&quot;Czech&quot; data-lang-id=&quot;cz_CZ&quot;&gt;&lt;img src=&quot;img/flags/cz.png&quot; alt=&quot;Czech Republic&quot;&gt; Če&scaron;tina&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;dk&#39;); return false;&quot; title=&quot;Danish&quot; data-lang-id=&quot;dk_DK&quot;&gt;&lt;img src=&quot;img/flags/dk.png&quot; alt=&quot;Denmark&quot;&gt; Dansk&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;de&#39;); return false;&quot; title=&quot;German&quot; data-lang-id=&quot;de_DE&quot;&gt;&lt;img src=&quot;img/flags/de.png&quot; alt=&quot;Germany&quot;&gt; Deutsch&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;ee&#39;); return false;&quot; title=&quot;Estonian&quot; data-lang-id=&quot;ee_EE&quot;&gt;&lt;img src=&quot;img/flags/ee.png&quot; alt=&quot;Estonia&quot;&gt; Eesti&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;en&#39;); return false;&quot; title=&quot;English (UK)&quot; data-lang-id=&quot;en_UK&quot;&gt;&lt;img src=&quot;img/flags/gb.png&quot; alt=&quot;United Kingdom&quot;&gt; English (UK)&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;en&#39;); return false;&quot; title=&quot;English (US)&quot;  data-lang-id=&quot;en_US&quot; class=&quot;pls-selected-locale&quot;&gt;&lt;img src=&quot;img/flags/us.png&quot; alt=&quot;United States&quot;&gt; English (US)&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;es&#39;); return false;&quot; title=&quot;Spanish&quot; data-lang-id=&quot;es_ES&quot;&gt;&lt;img src=&quot;img/flags/es.png&quot; alt=&quot;Spain&quot;&gt; Espa&ntilde;ol&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;fr&#39;); return false;&quot; title=&quot;French (Canada)&quot; data-lang-id=&quot;fr_CA&quot;&gt;&lt;img src=&quot;img/flags/ca.png&quot; alt=&quot;Canada&quot;&gt; Fran&ccedil;ais (Canada)&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;fr&#39;); return false;&quot; title=&quot;French (France)&quot; data-lang-id=&quot;fr_FR&quot;&gt;&lt;img src=&quot;img/flags/fr.png&quot; alt=&quot;France&quot;&gt; Fran&ccedil;ais (France)&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;hr&#39;); return false;&quot; title=&quot;Croatian&quot; data-lang-id=&quot;hr_HR&quot;&gt;&lt;img src=&quot;img/flags/hr.png&quot; alt=&quot;Croatia&quot;&gt; Hrvatski&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;is&#39;); return false;&quot; title=&quot;Icelandic&quot; data-lang-id=&quot;is_IS&quot;&gt;&lt;img src=&quot;img/flags/is.png&quot; alt=&quot;Iceland&quot;&gt; &rlm;&Iacute;slenska&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;it&#39;); return false;&quot; title=&quot;Italian&quot; data-lang-id=&quot;it_IT&quot;&gt;&lt;img src=&quot;img/flags/it.png&quot; alt=&quot;Italy&quot;&gt; Italiano&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;lv&#39;); return false;&quot; title=&quot;Latvian&quot; data-lang-id=&quot;lv_LV&quot;&gt;&lt;img src=&quot;img/flags/lv.png&quot; alt=&quot;Latvia&quot;&gt; Latvie&scaron;u&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;lt&#39;); return false;&quot; title=&quot;Lithuanian&quot; data-lang-id=&quot;lt_LT&quot;&gt;&lt;img src=&quot;img/flags/lt.png&quot; alt=&quot;Lithuania&quot;&gt; Lietuvių&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;hu&#39;); return false;&quot; title=&quot;Hungarian&quot; data-lang-id=&quot;hu_HU&quot;&gt;&lt;img src=&quot;img/flags/hu.png&quot; alt=&quot;Hungary&quot;&gt; Magyar&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;nl&#39;); return false;&quot; title=&quot;Dutch&quot; data-lang-id=&quot;nl_NL&quot;&gt;&lt;img src=&quot;img/flags/nl.png&quot; alt=&quot;Netherlands&quot;&gt; Nederlands&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;nl&#39;); return false;&quot; title=&quot;Dutch (Belgium)&quot; data-lang-id=&quot;nl_BE&quot;&gt;&lt;img src=&quot;img/flags/be.png&quot; alt=&quot;Belgium&quot;&gt; Nederlands (Belgi&euml;)&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;no&#39;); return false;&quot; title=&quot;Norwegian (bokmal)&quot; data-lang-id=&quot;no_NO&quot;&gt;&lt;img src=&quot;img/flags/no.png&quot; alt=&quot;Norway&quot;&gt; Norsk (bokm&aring;l)&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;ny&#39;); return false;&quot; title=&quot;Norwegian (nynorsk)&quot; data-lang-id=&quot;ny_NO&quot;&gt;&lt;img src=&quot;img/flags/no.png&quot; alt=&quot;Norway&quot;&gt; Norsk (nynorsk)&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;pl&#39;); return false;&quot; title=&quot;Polish&quot; data-lang-id=&quot;pl_PL&quot;&gt;&lt;img src=&quot;img/flags/pl.png&quot; alt=&quot;Poland&quot;&gt; Polski&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;pt&#39;); return false;&quot; title=&quot;Portuguese (Brazil)&quot; data-lang-id=&quot;pt_BR&quot;&gt;&lt;img src=&quot;img/flags/br.png&quot; alt=&quot;Brazil&quot;&gt; Portugu&ecirc;s (Brasil)&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;pt&#39;); return false;&quot; title=&quot;Portuguese (Portugal)&quot; data-lang-id=&quot;pt_PT&quot;&gt;&lt;img src=&quot;img/flags/pg.png&quot; alt=&quot;Portugal&quot;&gt; Portugu&ecirc;s (Portugal)&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;ro&#39;); return false;&quot; title=&quot;Romanian&quot; data-lang-id=&quot;ro_RO&quot;&gt;&lt;img src=&quot;img/flags/ro.png&quot; alt=&quot;Romania&quot;&gt; Rom&acirc;nă&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;sk&#39;); return false;&quot; title=&quot;Slovak&quot; data-lang-id=&quot;sk_SK&quot;&gt;&rlm;&lt;img src=&quot;img/flags/sk.png&quot; alt=&quot;Slovakia&quot;&gt; Slovenčina&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;si&#39;); return false;&quot; title=&quot;Slovenian&quot; data-lang-id=&quot;si_SI&quot;&gt;&lt;img src=&quot;img/flags/si.png&quot; alt=&quot;Slovenia&quot;&gt; Sloven&scaron;čina&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;fi&#39;); return false;&quot; title=&quot;Finnish&quot; data-lang-id=&quot;fi_FI&quot;&gt;&lt;img src=&quot;img/flags/fi.png&quot; alt=&quot;Finland&quot;&gt; Suomi&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;se&#39;); return false;&quot; title=&quot;Swedish&quot; data-lang-id=&quot;se_SE&quot;&gt;&lt;img src=&quot;img/flags/se.png&quot; alt=&quot;Sweden&quot;&gt; Svenska&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;tr&#39;); return false;&quot; title=&quot;Turkish&quot; data-lang-id=&quot;tr_TR&quot;&gt;&lt;img src=&quot;img/flags/tr.png&quot; alt=&quot;Turkey&quot;&gt; T&uuml;rk&ccedil;e&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;gr&#39;); return false;&quot; title=&quot;Greek&quot; data-lang-id=&quot;gr_GR&quot;&gt;&lt;img src=&quot;img/flags/gr.png&quot; alt=&quot;Greece&quot;&gt; &Epsilon;&lambda;&lambda;&eta;&nu;&iota;&kappa;ά&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;bg&#39;); return false;&quot; title=&quot;Bulgarian&quot; data-lang-id=&quot;bg_BG&quot;&gt;&lt;img src=&quot;img/flags/bg.png&quot; alt=&quot;Bulgaria&quot;&gt; Български&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;ru&#39;); return false;&quot; title=&quot;Russian&quot; data-lang-id=&quot;ru_RU&quot;&gt;&lt;img src=&quot;img/flags/ru.png&quot; alt=&quot;Russia&quot;&gt; Русский&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;ua&#39;); return false;&quot; title=&quot;Ukrainian&quot; data-lang-id=&quot;ua_UA&quot;&gt;&lt;img src=&quot;img/flags/ua.png&quot; alt=&quot;Ukraine&quot;&gt; Українська&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;hi&#39;); return false;&quot; title=&quot;Hindi&quot; data-lang-id=&quot;hi_IN&quot;&gt;&lt;img src=&quot;img/flags/in.png&quot; alt=&quot;India&quot;&gt; हिन्दी&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;kr&#39;); return false;&quot; title=&quot;Korean&quot; data-lang-id=&quot;kr_KR&quot;&gt;&lt;img src=&quot;img/flags/kr.png&quot; alt=&quot;South Korea&quot;&gt; 한국어&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;cn&#39;); return false;&quot; title=&quot;Traditional Chinese (Taiwan)&quot; data-lang-id=&quot;cn_TW&quot;&gt;&lt;img src=&quot;img/flags/tw.png&quot; alt=&quot;Taiwan&quot;&gt; 中文(台灣)&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;cn&#39;); return false;&quot; title=&quot;Simplified Chinese (China)&quot; data-lang-id=&quot;cn_CN&quot;&gt;&lt;img src=&quot;img/flags/cn.png&quot; alt=&quot;China&quot;&gt; 中文(简体)&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;cn&#39;); return false;&quot; title=&quot;Traditional Chinese (Hong Kong)&quot; data-lang-id=&quot;cn_HK&quot;&gt;&lt;img src=&quot;img/flags/hk.png&quot; alt=&quot;Hong Kong&quot;&gt; 中文(香港)&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;jp&#39;); return false;&quot; title=&quot;Japanese&quot; data-lang-id=&quot;jp_JP&quot;&gt;&lt;img src=&quot;img/flags/jp.png&quot; alt=&quot;Japan&quot;&gt; 日本語&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;window.lang.change(&#39;ka&#39;); return false;&quot; title=&quot;Japanese (Kansai)&quot; data-lang-id=&quot;ka_JP&quot;&gt;&lt;img src=&quot;img/flags/jp.png&quot; alt=&quot;Japan&quot;&gt; 日本語(関西)&lt;/a&gt;&lt;/li&gt;</pre>
+<div>
+	&nbsp;</div>
+<div class="alert alert-error">
+	<i class="fa fa-exclamation-triangle"></i> Note : If your country flag is not included you can download it from here http://www.famfamfam.com/lab/icons/flags/ </div>
+<div>&nbsp;</div>
+<div>
+	&nbsp;</div>
+<h1>
+	STEP 3 :&nbsp;define the packs and their paths.</h1>
+<p>&nbsp;
+	</p>
+<div>
+	In the index.html go to line no 544 to add &nbsp;more language packs and their paths.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="img/lang-js.jpg"></div>
+<div>
+	&nbsp;</div>
+<div>
+	For example say you want to add language for&nbsp;Czech Republic, then add it as below</div>
+<div>
+	&nbsp;</div>
+<div class="alert">
+	lang.dynamic(&#39;cz&#39;, &#39;js/langpack/cz.json&#39;);</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>We pass the two-letter language code and the path to the language pack json file</strong></div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div class="alert alert-success">
+	&#39;cz&#39; is the two-letter language code</div>
+<div class="alert alert-success">
+	&#39;cz.json&#39; is the path to the language pack json file</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	To add a new language for example say france change the two-letter language code and the path.</div>
+<div>
+	lang.dynamic(&#39;fr&#39;, &#39;js/langpack/fr.json&#39;);</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div class="alert alert-info">
+	<i class="fa fa-info-circle"></i> You can find the two-letter language code from step no 2</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<h1>
+	STEP 4 :&nbsp;Create a language pack</h1>
+<p>
+	Language packs are defined in JSON files which can be found inside langpack folder, which is inside the js folder.</p>
+<p>
+	<img alt="" src="img/lang-path.jpg"></p>
+<p>&nbsp;
+	</p>
+<h3>
+	Create a JSON file and name the JSON file as follows :</h3>
+<h3>
+	cz.json</h3>
+<p>
+	Where cz corresponds to the&nbsp;two-letter language code from&nbsp;<strong>SETP 2</strong></p>
+<div>
+	&nbsp;</div>
+<h3>
+	Add to the JSON files like so:</h3>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<pre class="prettyprint lang-js linenums">
+{
+&quot;token&quot;: {
+<div>
+	&quot;Startup Landing Page For Your Product&quot;:&quot;Landing Page de d&eacute;marrage Produit&quot;,</div>
+<div>
+	&quot;Perfect and awesome theme to present your product or service&quot;:&quot;Th&egrave;me parfait et impressionnant de pr&eacute;senter votre produit ou service&quot;,</div>
+<div>
+	&quot;GET STARTED&quot;:&quot;POUR COMMENCER&quot;,</div>
+<div>
+	&quot;K Worldwide Signups&quot;:&quot;K Mondiaux Signups&quot;,</div>
+<div>
+	&quot;Features&quot;:&quot;Caract&eacute;ristiques&quot;,</div>
+<div>
+	&quot;Reviews&quot;:&quot;Avis&quot;,</div>
+<div>
+	&quot;Pricing&quot;:&quot;tarification&quot;,</div>
+<div>
+	&quot;Team&quot;:&quot;&eacute;quipe&quot;,</div>
+<div>
+	&quot;Contact&quot;:&quot;Contact&quot;,</div>
+<div>
+	&quot;Login&quot;:&quot;S&#39;identifier&quot;,</div>
+<div>
+	&quot;JOIN US&quot;:&quot;REJOIGNEZ-NOUS&quot;,</div>
+<div>
+	&quot;We Are Featured On&quot;:&quot;Nous sont pr&eacute;sent&eacute;s sur&quot;,</div>
+<div>
+	&quot;Main Benefits Of The Product&quot;:&quot;Principaux avantages du produit&quot;,</div>
+<div>
+	&quot;Reasons why you should choose this product&quot;:&quot;Raisons pour lesquelles vous devriez choisir ce produit&quot;,</div>
+<div>
+	&quot;Video Preview Of Product&quot;:&quot;Aper&ccedil;u vid&eacute;o de Produit&quot;,</div>
+<div>
+	&quot;Learn More About The Product&quot;:&quot;En savoir plus sur le produit&quot;,</div>
+<div>
+	&quot;TAKE A TOUR&quot;:&quot;FAIS UN TOUR&quot;,</div>
+<div>
+	&quot;Reviews From Our Users&quot;:&quot;Avis de nos utilisateurs&quot;,</div>
+<div>
+	&quot;What our users are saying about the product&quot;:&quot;Qu&#39;est-ce que nos utilisateurs disent au sujet du produit&quot;,</div>
+<div>
+	&quot;We Provide Flexible Plans&quot;:&quot;Nous offrons des r&eacute;gimes flexibles&quot;,</div>
+<div>
+	<span style="font-family: Arial, Verdana, sans-serif;">&quot;Free signup. 14 days free trial. No credit card required.&quot;:&quot;Inscription gratuite. 14 jours d&#39;essai gratuit . Aucune carte de cr&eacute;dit requise .&quot;</span> 
+  
+    } 
+  }</div>
+</pre>
+<div>
+	&nbsp;</div>
+<div class="alert alert-success">
+	&quot;Startup Landing Page For Your Product&quot; corresponds to the words in the HTML content</div>
+<div class="alert alert-success">
+	&quot;Landing Page de d&eacute;marrage Produit&quot; is the equivalent translation.</div>
+<div>
+	&nbsp;</div>
+<div class="alert alert-info">
+	<i class="fa fa-info-circle"></i> Validate you code using JSON lint to make sure there is no errors http://jsonlint.com/</div>
+<p>&nbsp;
+	</p>
+
+<div class="alert alert-error">
+	<i class="fa fa-exclamation-triangle"></i> More details about the plugin can be found here https://github.com/Irrelon/jquery-lang-js</div>
+  
+  <div>
+	&nbsp;</div>
+  <div class="alert alert-error">
+	<i class="fa fa-exclamation-triangle"></i> You need a webhost for this to work.</div>
+  <div>&nbsp;</div>
+<div class="alert alert-error">
+<i class="fa fa-exclamation-triangle"></i> Note : Twitter feed and google map infowindow text cannot be translated.	 
+</div>
+<div>&nbsp;</div>
+</section>
+
+<section id="how_to_change_social_media">
+	<div class="page-header"><h3>How to change social media?</h3><hr class="notop"></div>
+  <div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="img/social.jpg"></div>
+  
+<div>
+	&nbsp;</div>
+<div>
+	Open the index.html file in your code editor.</div>
+<div>
+	&nbsp;</div>
+<div>
+	Social media links can be changed on line no 500</div>
+<div>
+	&nbsp;</div>
+<div>
+	Change the value of href { change the # to say https://twitter.com/name } to correspond to the social media name.</div>
+
+
+
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>Add more icons if needed (optional)</strong></div>
+<div>
+	&nbsp;</div>
+<div>
+	You can add more social media links if needed.</div>
+<div>
+	&nbsp;</div>
+<div>
+	More icons can be found here. http://fortawesome.github.io/Font-Awesome/icons/</div>
+<div>
+	&nbsp;</div>
+<div>
+	Select the icon you need , click on one of them for example linkedin-square http://fortawesome.github.io/Font-Awesome/icon/linkedin-square/&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	Add another line of code after line no 473 in index.html , which should look like this&nbsp;, &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-linkedin-square&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</div>
+  <div>
+	&nbsp;</div>
+  <div class="alert alert-info"><i class="fa fa-info-circle"></i> Check out fortawesome doc for more info http://fortawesome.github.io/Font-Awesome/examples/</div>
+</section>
+<section id="boot">
+	<div class="page-header"><h3>Customize Bootstrap's components</h3><hr class="notop"></div>
+  
+
+  <div>
+	<strong>http://getbootstrap.com/customize/?id=4b1e550c708d29e34856701e9f09cd95</strong></div>
+  
+
+  
+
+</section>
+<section id="credits">
+	<div class="page-header"><h3>Credits</h3><hr class="notop"></div>
+<div>
+	http://getbootstrap.com/customize/?id=4b1e550c708d29e34856701e9f09cd95</div>
+<div>
+	http://freebiesbug.com/psd-freebies/map-pins-markers-psd/</div>
+  <div>
+	https://github.com/morteza/bootstrap-rtl</div>
+<div>
+	http://freebiesbug.com/psd-freebies/light-uiux-kit-psd/</div>
+  <div>
+	https://www.iconfinder.com/</div>
+  <div>
+	http://shaboopie.com/free-logo-templates-psd-pg1/</div>
+  <div>
+	http://freebiesbug.com/psd-freebies/dashel-45-free-icons/</div>
+	 <div>
+	http://www.pixeden.com/psd-mock-up-templates/imac-macbook-psd-flat-mockup</div>
+<div>
+	https://github.com/imulus/retinajs</div>
+<div>
+	http://fortawesome.github.io/Font-Awesome/</div>
+  <div>
+	http://www.coverr.co/</div>
+	  <div>
+	https://snazzymaps.com/</div>
+  <div>
+	http://dimsemenov.com/plugins/magnific-popup/</div>
+   <div>
+	https://github.com/Irrelon/jquery-lang-js</div>
+   <div>
+	http://www.famfamfam.com/lab/icons/flags/</div>
+    <h5>Useful sites</h5>
+    <div>
+	http://realfavicongenerator.net/ (Favicon Generator)</div>
+  <div>
+	https://tinypng.com/ (Advanced lossy compression for images )</div>
+   <div>
+	https://github.com/svg/svgo (Nodejs-based tool for optimizing SVG vector graphics files. )</div>
+</section>
+
+	</div>
+</body>
+</html>
