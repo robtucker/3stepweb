@@ -9,6 +9,9 @@ app:
     dir: "/var/www/3stepweb"
     public_dir: "/var/www/3stepweb/public"
     env: "local"
+domain:
+    production: co.uk
+    local: loc
 python:
     version: '3.4'
     venv:  "/var/www/3stepweb/venv"

@@ -8,7 +8,6 @@
   become: yes
   become_method: sudo
   template: src=nginx.conf dest=/etc/nginx.conf
-  notify: restart nginx
 
 - name: Add nginx site conf
   become: yes

@@ -129,7 +129,7 @@ strong { font-weight: 600; }
   font-size: 22px;
   color: #fff;
   font-weight: 400;
-  margin: 0;
+  margin-bottom: 25px;
 }
 
 .btn {
@@ -1118,4 +1118,9 @@ blockquote::before {
 @media (min-width: 992px) and (max-width: 1200px ) {
 
 .features img { width: 820px; }
+}
+
+.margin-y-xl {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }

@@ -4,9 +4,20 @@
   "version": "1.0.0",
   "author": "Rob Tucker <robertlgtucker@gmail.com>",
   "main": "index.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^4.0.0-alpha.2",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-if": "^2.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.4",
+    "gulp-wrap-js": "^0.4.1",
+    "merge-stream": "^1.0.0"
   },
   "scripts": {
     "test": "karma"
