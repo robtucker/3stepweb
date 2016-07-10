@@ -1,15 +1,15 @@
 ### Installation
 
-add to your hosts file:
-
-```
-10.0.0.124      3stepweb.loc
-```
-
-then clone the repo and vagrant up
+If you have not configured your IDE for typescript then you may wish to
+consider using https://code.visualstudio.com/ whilst you get started.
 
 ```
 git clone git@bitbucket.org:robtucker/3stepweb.git
 cd 3stepweb
-vagrant up
+npm install typings webpack-dev-server rimraf webpack -g
+npm install
+typings install
+npm run server
 ```
+
+
