@@ -1,3 +1,2 @@
-import BaseModel from "./core.model"
+export * from "./services/logger.service";
 
-export default BaseModel 
