@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <base href="/">
+    
+    <!-- metas -->
+    <% _.each(htmlWebpackPlugin.options.metas, function(meta) { %>
+    <meta <% Object.keys(meta).forEach(function(attr) {%>${ attr }="${ meta[attr] }" <% }); %>/>
+    <% }); %>
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+
+    <app/>
+
+
+</body>
+</html>

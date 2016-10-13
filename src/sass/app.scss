@@ -1,8 +1,7 @@
-@import 'variables/colors_custom';
-@import 'variables/variables';
-@import 'variables/variables_custom';
-@import '../node_modules/bootstrap/scss/bootstrap';
+@import "./variables/colors";
+@import "./variables/custom_bootstrap";
 
-// Font awesome
-$fa-font-path: "../fonts/fa/";
-@import "../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+@import "./components/backgrounds";

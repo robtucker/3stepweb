@@ -7,7 +7,7 @@ server:
 app:
     name: 3stepweb
     dir: "/var/www/3stepweb"
-    public_dir: "/var/www/3stepweb/public"
+    public_dir: "/var/www/3stepweb/dist"
     env: "local"
 domain:
     production: co.uk
