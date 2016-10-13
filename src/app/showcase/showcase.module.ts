@@ -3,6 +3,7 @@ import { CommonModule }   from '@angular/common';
 
 import { ShowcaseRoutingModule } from "./showcase-routing.module";
 import { ShowcaseComponent } from './showcase.component';
+import { ShowcaseDetailComponent } from './showcase-detail.component';
 
 import { ShowcaseService } from "./showcase.service";
 
@@ -12,7 +13,8 @@ import { ShowcaseService } from "./showcase.service";
         ShowcaseRoutingModule
     ],
     declarations: [
-        ShowcaseComponent
+        ShowcaseComponent,
+        ShowcaseDetailComponent
     ],
     providers: [
         ShowcaseService
