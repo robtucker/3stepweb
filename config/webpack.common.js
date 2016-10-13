@@ -4,9 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const ENV = exports.ENV = {
+const APP_GLOBALS = exports.APP_GLOBALS = {
     HISTORY_API_FALLBACK: true,
-}
+    LOG_LEVEL: 100,
+};
 
 const WEBPACK_CONFIG = exports.WEBPACK_CONFIG = {
     context: process.env.NODE_PATH + "/src",

@@ -34,6 +34,7 @@
     "angular2-router-loader": "^0.3.2",
     "angular2-template-loader": "^0.5.0",
     "awesome-typescript-loader": "^2.2.4",
+    "colors": "^1.1.2",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-loader": "^0.4.4",

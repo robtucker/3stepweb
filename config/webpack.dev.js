@@ -1,37 +1,44 @@
 const webpack = require('webpack');
 
-const webpackMerge = require('webpack-merge');
+const helpers = require('./helpers');
 
-const commonConfig = require( "./webpack.common");
-
-const _ = require('lodash');
+const colors = require('colors');
 
 /**
- * Merge in the development environment variables
+ * Set environment variables
  */
-const ENV = _.merge(commonConfig.ENV, {
-    NODE_ENV: 'development',
-    HOST: 'localhost',
-    PORT: 3000,
-    LOG_LEVEL: 200
+const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
+
+const HOST = process.env.HOST = 'localhost';
+
+const PORT = process.env.PORT = 3000;
+
+const APP_GLOBALS = helpers.mergeEnvironment({
+    ENV: ENV,
+    HOST: HOST,
+    LOG_LEVEL: 200,
 });
+
+//console.log(APP_GLOBALS);
 
 /**
  * Merge in the development webpack config properties
  */
-module.exports = webpackMerge(commonConfig.WEBPACK_CONFIG, {
+const WEBPACK_CONFIG = helpers.mergeWebpackConfig({
     plugins: [
-        new webpack.DefinePlugin({
-            APP_CONFIG: ENV
-        })
+        new webpack.DefinePlugin(helpers.configureAppGlobals(APP_GLOBALS))
     ],
     devServer: {
-        port: ENV.PORT,
-        host: ENV.HOST,
-        historyApiFallback: ENV.HISTORY_API_FALLBACK,
+        port: PORT,
+        host: HOST,
+        historyApiFallback: APP_GLOBALS.HISTORY_API_FALLBACK,
         watchOptions: {
             aggregateTimeout: 300,
             poll: 1000
         },
     },
 });
+
+//console.log(WEBPACK_CONFIG);
+
+module.exports = WEBPACK_CONFIG;

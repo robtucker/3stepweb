@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { CoreModule } from "./core/core.module";
 import { AppRoutingModule }   from './app-routing.module';
 import { ShowcaseModule } from './showcase/showcase.module';
 
@@ -12,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 @NgModule({
     imports:      [ 
         BrowserModule,
+        CoreModule,
         AppRoutingModule,
         ShowcaseModule,
     ],
@@ -24,8 +26,4 @@ import { HomeComponent } from './home/home.component';
     ],
     bootstrap:    [ AppComponent ]
 })
-export class AppModule { 
-    constructor(showcaseModule: ShowcaseModule) {
-        console.log(ShowcaseModule);
-    }
-}
+export class AppModule { }

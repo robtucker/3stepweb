@@ -1,26 +1,22 @@
 const webpack = require('webpack');
 
-const webpackMerge = require('webpack-merge');
+const helpers = require('./helpers');
 
-const commonConfig = require( "./webpack.common");
-
-const _ = require('lodash');
+const ENV = process.env.ENV = process.env.NODE_ENV = 'production';
 
 /**
- * Merge in the production environment variables
+ * Merge in the development environment variables
  */
-const ENV = _.merge(commonConfig.ENV, {
-    NODE_ENV: 'production',
-    LOG_LEVEL: 0
+const APP_GLOBALS = helpers.mergeEnvironment({
+    ENV: ENV,
+    LOG_LEVEL: 300
 });
 
 /**
  * Merge in the development webpack config properties
  */
-module.exports = webpackMerge(commonConfig.WEBPACK_CONFIG, {
+module.exports = helpers.mergeWebpackConfig({
     plugins: [
-        new webpack.DefinePlugin({
-            APP_CONFIG: ENV
-        })
+        new webpack.DefinePlugin(helpers.configureAppGlobals(APP_GLOBALS))
     ]
 });
