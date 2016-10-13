@@ -4,7 +4,7 @@
   "description": "3stepweb website",
   "main": "index.ts",
   "scripts": {
-    "dev": "webpack-dev-server --progress --profile --watch --content-base dist/",
+    "server": "webpack-dev-server --progress --profile --watch --content-base dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Robert Tucker <rob@coderlab.co.uk>",
@@ -31,6 +31,9 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.37",
+    "angular2-router-loader": "^0.3.2",
+    "angular2-template-loader": "^0.5.0",
+    "awesome-typescript-loader": "^2.2.4",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-loader": "^0.4.4",
@@ -38,9 +41,11 @@
     "lodash": "^4.16.4",
     "node-sass": "^3.10.0",
     "postcss-loader": "^0.13.0",
+    "raw-loader": "^0.5.1",
     "sass-loader": "^4.0.2",
     "source-map-loader": "^0.1.5",
     "style-loader": "^0.13.1",
+    "systemjs": "^0.19.27",
     "ts-loader": "^0.8.2",
     "typescript": "^2.0.3",
     "webpack": "^1.13.2",

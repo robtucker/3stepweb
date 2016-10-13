@@ -5,6 +5,7 @@ const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
 
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -12,7 +13,8 @@ module.exports = {
     context: __dirname + "/src",
     entry: {
         main: "./main.ts",
-        vendor: "./vendor.ts"
+        vendor: "./vendor.ts",
+        polyfills: "./polyfills"
     },
     output: {
         path: __dirname + "/dist",
@@ -22,12 +24,12 @@ module.exports = {
         loaders: [
             {
                 test: /\.html$/,
-                loaders: ["html"]
+                loader: 'raw-loader'
             },
             { 
                 test: /\.ts$/, 
                 exclude: /node_modules/,
-                loader: "ts-loader" 
+                loaders: ["awesome-typescript-loader", "angular2-router-loader", "angular2-template-loader"]
             },
             {
                 test: /\.scss$/,
@@ -50,11 +52,12 @@ module.exports = {
                 {"name": "viewport", "content": "width=device-width, initial-scale=1"}
             ]
         }),
-        new ExtractTextPlugin("[name].css")
+        
+        new ExtractTextPlugin("[name].css"),
 
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: ['polyfills', 'vendor'].reverse()
-        // }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['app', 'vendor', 'polyfills']
+        }),
     ],
     resolve: {
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.html']

@@ -1,12 +1,22 @@
 import { NgModule }     from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 import { ShowcaseComponent } from './showcase.component';
+
+// routes specific to the showcase feature area
+const ROUTES: Routes = [
+    { path: ':id', component: ShowcaseComponent }
+
+];
 
 @NgModule({
     imports: [
         RouterModule.forChild([
-            { path: 'showcase/:id', component: ShowcaseComponent },
+            {
+                path: '',
+                children: ROUTES,
+                component: ShowcaseComponent
+            }
         ])
     ],
     exports: [
