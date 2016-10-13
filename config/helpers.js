@@ -27,10 +27,6 @@ exports.mergeEnvironment = function(environment) {
  */
 exports.configureAppGlobals = function(globals) {
     return {
-        'process.env': {
-            'APP_GLOBALS' : JSON.stringify(globals),
-            'ENV': JSON.stringify(globals.ENV),
-            'NODE_ENV': JSON.stringify(globals.ENV)
-        }
+        'process.env': JSON.stringify(globals)
     }
 };

@@ -1,5 +1,8 @@
-export interface Log {
-    
+import { Injectable } from "@angular/core";
+
+import { AppGlobals } from "./globals.service";
+
+export interface ILog {
     debug(msg);
     info(msg);
     warn(msg);
@@ -8,7 +11,8 @@ export interface Log {
 
 }
 
-export class Log {
+@Injectable()
+export class Log implements ILog {
 
     private LEVELS = {
         DEBUG: 100,
@@ -18,33 +22,30 @@ export class Log {
         CRITICAL: 500
     };
 
-    constructor() {
-        console.log('logging app config');
-        console.log(process.env);
-    }
+    constructor(private globals: AppGlobals) { }
     
-    debug(msg) {
-        log('DEBUG', msg);
+    debug(msg: any) {
+        this.log(msg, 'DEBUG');
     }
 
-    info(msg) {
-        log('DEBUG', msg);
+    info(msg: any) {
+        this.log(msg, 'INFO');
     }
 
-    warn(msg) {
-        log('DEBUG', msg);
+    warn(msg: any) {
+        this.log(msg, 'WARN');
     }
 
-    error(msg) {
-        log('DEBUG', msg);
+    error(msg: any) {
+        this.log(msg, 'ERROR');
     }
 
-    critical(msg) {
-        log('DEBUG', msg);
+    critical(msg: any) {
+        this.log(msg, 'CRITICAL');
     }
 
-    log(type, msg) {
-        if(process.env.LOG_LEVEL > this.LEVELS[type]) {
+    log(msg: any, level ?: string) {
+        if(!level || this.globals.LOG_LEVEL >= this.LEVELS[level]) {
             console.log(msg);
         }
     }
