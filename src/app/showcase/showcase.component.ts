@@ -4,7 +4,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 
-import { AppGlobals, Log } from "../core";
+import { AppConfig, Logger } from "../core";
 
 /**
  * individual showcase
@@ -15,7 +15,6 @@ import { Showcase } from "./showcase";
  * showcase data service
  */
 import { ShowcaseService } from "./showcase.service";
-
 
 /**
  * Showcase component class
@@ -42,8 +41,8 @@ export class ShowcaseComponent implements OnInit {
         private route: ActivatedRoute,
         private location: Location,
         private router: Router,
-        private log: Log,
-        public globals: AppGlobals
+        private log: Logger,
+        public config: AppConfig
     ) {}
 
     getShowcases() {
@@ -52,7 +51,7 @@ export class ShowcaseComponent implements OnInit {
 
     ngOnInit(): void {
         this.log.debug('Initializing showcase component');
-        this.log.debug(JSON.stringify(this.globals));
+        this.log.debug(JSON.stringify(this.config));
 
         this.getShowcases();
     }

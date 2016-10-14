@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Logger } from "./core";
+
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
@@ -10,5 +12,6 @@ import { ActivatedRoute } from "@angular/router";
   `
 })
 export class AppComponent { 
+    construct(log: Logger) {}
 
 }

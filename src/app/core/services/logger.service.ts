@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 
-import { AppGlobals } from "./globals.service";
+import { AppConfig } from "./app-config.service";
 
-export interface ILog {
+export interface LoggerInterface {
     debug(msg);
     info(msg);
     warn(msg);
@@ -12,7 +12,7 @@ export interface ILog {
 }
 
 @Injectable()
-export class Log implements ILog {
+export class Logger implements LoggerInterface {
 
     private LEVELS = {
         DEBUG: 100,
@@ -22,7 +22,7 @@ export class Log implements ILog {
         CRITICAL: 500
     };
 
-    constructor(private globals: AppGlobals) { }
+    constructor(private config: AppConfig) { }
     
     debug(msg: any) {
         this.log(msg, 'DEBUG');
@@ -45,7 +45,7 @@ export class Log implements ILog {
     }
 
     log(msg: any, level ?: string) {
-        if(!level || this.globals.LOG_LEVEL >= this.LEVELS[level]) {
+        if(!level || this.config.LOG_LEVEL >= this.LEVELS[level]) {
             console.log(msg);
         }
     }

@@ -1,8 +1,8 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf, OpaqueToken } from '@angular/core';
 import { CommonModule }      from '@angular/common';
 
-import { Log } from "./services/log.service";
-import { APP_GLOBALS, AppGlobals } from "./services/globals.service";
+import { Logger } from "./services/logger.service";
+import { APP_GLOBALS, AppConfig } from "./services/app-config.service";
 
 /**
  * Core module
@@ -13,9 +13,9 @@ import { APP_GLOBALS, AppGlobals } from "./services/globals.service";
         CommonModule
     ],
     providers: [
-        Log,
+        Logger,
         {provide: "APP_GLOBALS", useValue: APP_GLOBALS},
-        AppGlobals,
+        AppConfig,
     ]
 })
 export class CoreModule {
@@ -32,6 +32,3 @@ export class CoreModule {
     }
 
 }
-
-export * from "./services/globals.service";
-export * from "./services/log.service";

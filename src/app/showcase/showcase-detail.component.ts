@@ -2,6 +2,8 @@ import { Component } from "@angular/core";
 import { OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
+import { Logger } from "../core";
+
 /**
  * individual showcase
  */
@@ -27,6 +29,7 @@ export class ShowcaseDetailComponent implements OnInit {
     public selectedShowcase: Showcase;
 
     constructor(
+        log: Logger,
         private showcaseService: ShowcaseService,
         private route: ActivatedRoute
     ) {}

@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 
+import { Logger } from "../core";
+    
 @Component({
     selector: "navbar",
     templateUrl: "./templates/navbar.html"
@@ -7,5 +9,7 @@ import { Component } from "@angular/core";
 export class NavbarComponent { 
 
     public displayNav = true;
+
+    construct(log: Logger) {}
 
 }
