@@ -28,16 +28,19 @@ const WEBPACK_CONFIG = exports.WEBPACK_CONFIG = {
             },
             { 
                 test: /\.ts$/, 
-                exclude: /node_modules/,
+                //exclude: /node_modules/,
                 loaders: ["awesome-typescript-loader", "angular2-router-loader", "angular2-template-loader"]
             },
             {
                 test: /\.scss$/,
-                loaders: ["style", "css", "sass"]
+                loader: ExtractTextPlugin.extract("style", "css!sass")
             },
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract('style', 'css-loader!postcss-loader')
+                loader: ExtractTextPlugin.extract({
+                    fallbackLoader: "style-loader",
+                    loader: "css-loader"
+                })
             }
         ]
     },
@@ -53,11 +56,13 @@ const WEBPACK_CONFIG = exports.WEBPACK_CONFIG = {
             ]
         }),
         
-        new ExtractTextPlugin("[name].css"),
+        new ExtractTextPlugin("css/[name].css"),
 
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
         }),
+        new webpack.NormalModuleReplacementPlugin(/\.css$/, newResource)
+
     ],
     resolve: {
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.html']

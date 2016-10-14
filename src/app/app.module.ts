@@ -1,9 +1,15 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { CoreModule } from "./core/core.module";
+// import { MaterialModule } from '@angular/material';
+// import { MdButtonModule } from '@angular/material';
+// import { MdButton } from '@angular/material';
+
+import { CoreModule } from "./core";
+import { ElementsModule } from "./elements";
+
 import { AppRoutingModule }   from './app-routing.module';
-import { ShowcaseModule } from './showcase/showcase.module';
+import { ShowcaseModule } from './showcase';
 
 import { AppComponent }   from './app.component';
 import { AbortComponent } from './abort/abort.component';
@@ -11,8 +17,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
-    imports:      [ 
+    imports: [ 
         BrowserModule,
+        ElementsModule,
         CoreModule,
         AppRoutingModule,
         ShowcaseModule,
@@ -21,8 +28,7 @@ import { HomeComponent } from './home/home.component';
         AppComponent,
         NavbarComponent,
         HomeComponent,
-        AbortComponent
-      
+        AbortComponent,      
     ],
     bootstrap:    [ AppComponent ]
 })

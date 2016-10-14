@@ -1,3 +1,6 @@
+import "./sass/app.scss";
+//import '@angular/material/button/button.scss';
+
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 
