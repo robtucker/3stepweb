@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 // import { MdButton } from '@angular/material';
 
 import { CoreModule } from "./core";
-import { ElementsModule } from "./elements";
+import { MaterialsModule } from "./materials";
 
 import { AppRoutingModule }   from './app-routing.module';
 import { ShowcaseModule } from './showcase';
@@ -19,7 +19,7 @@ import { HomeComponent } from './home/home.component';
 @NgModule({
     imports: [ 
         BrowserModule,
-        ElementsModule,
+        MaterialsModule,
         CoreModule,
         AppRoutingModule,
         ShowcaseModule,

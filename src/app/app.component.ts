@@ -8,7 +8,8 @@ import { ActivatedRoute } from "@angular/router";
   selector: 'app',
   template: `
     <navbar></navbar>
-    <button md-button color="primary" class="md-button-ripple">App button</button>
+    <button md-button class="bg-accent-lighter" color="primary">App button</button>
+    
     <router-outlet></router-outlet>
   `
 })

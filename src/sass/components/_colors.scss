@@ -1,0 +1,47 @@
+// background color mixin - accepts 2 params:
+// map: material design palette 
+// string: dark/light level
+@mixin text-color ($palette, $level) {
+    color: md-color($palette, $level);
+}
+
+// OOCSS classes for text colour
+.white {
+    color: #fff;
+}
+
+.primary {
+    $primary: map-get($theme, primary);
+
+    @include text-color($primary, 'default');
+}
+
+.primary-lighter {
+    $primary: map-get($theme, primary);
+
+    @include text-color($primary, 'lighter');
+}
+
+.primary-darker {
+    $primary: map-get($theme, primary);
+
+    @include text-color($primary, 'darker');
+}
+
+.accent {
+    $primary: map-get($theme, accent);
+
+    @include text-color($primary, 'default');
+}
+
+.accent-lighter {
+    $primary: map-get($theme, accent);
+
+    @include text-color($primary, 'lighter');
+}
+
+.accent-darker {
+    $primary: map-get($theme, accent);
+
+    @include text-color($primary, 'darker');
+}

@@ -1,13 +1,7 @@
 @import '~@angular/material/core/theming/all-theme';
 
 // custom vars
-@import "./variables/colors";
-@import "./variables/material_design";
-
-// Plus imports for other components in your app.
-//@import '~@angular/material/button/button';
-//@import '~@angular/material/toolbar/toolbar';
-@import "./components/backgrounds";
+@import "./material_design";
 
 // Include the base styles for Angular Material core. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -31,3 +25,6 @@ $theme: md-light-theme($primary, $accent, $warn);
 // that you are using.
 @include angular-material-theme($theme);
 
+
+// Plus imports for other components in your app.
+@import "./components/backgrounds";
