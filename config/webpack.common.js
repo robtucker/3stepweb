@@ -67,12 +67,15 @@ const WEBPACK_CONFIG = exports.WEBPACK_CONFIG = {
         extractSASS,
 
         new CopyWebpackPlugin(
-            [{ from: 'src/assets', to: 'img' }], //pattern
-            {ignore: ['humans.txt', 'robots.txt']} //options
-            ),
+            [{ from: 'assets/**'}],
+            {ignore: ['humans.txt', 'robots.txt']}
+        ),
 
         // copy humans.txt and robots.txt separately
-        new CopyWebpackPlugin([{ from: 'src/img', to: 'img' }]),
+        new CopyWebpackPlugin([
+            {from: 'src/assets/robots.txt'}, 
+            {from: 'src/assets/humans.txt'}
+        ]),
 
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
