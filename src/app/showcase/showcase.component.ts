@@ -1,5 +1,4 @@
-import { Component, Inject } from "@angular/core";
-import { OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from "@angular/core";
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
@@ -41,7 +40,7 @@ export class ShowcaseComponent implements OnInit {
         private route: ActivatedRoute,
         private location: Location,
         private router: Router,
-        private log: Logger,
+        private logger: Logger,
         public config: AppConfig
     ) {}
 
@@ -50,8 +49,8 @@ export class ShowcaseComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.log.debug('Initializing showcase component');
-        this.log.debug(JSON.stringify(this.config));
+        this.logger.debug('Initializing showcase component');
+        this.logger.debug(JSON.stringify(this.config));
 
         this.getShowcases();
     }

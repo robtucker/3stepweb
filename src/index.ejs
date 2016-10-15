@@ -8,6 +8,8 @@
     <% _.each(htmlWebpackPlugin.options.metas, function(meta) { %>
     <meta <% Object.keys(meta).forEach(function(attr) {%>${ attr }="${ meta[attr] }" <% }); %>/>
     <% }); %>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
 
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>

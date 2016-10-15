@@ -12,6 +12,9 @@ import { APP_GLOBALS, AppConfig } from "./services/app-config.service";
     imports: [
         CommonModule
     ],
+    exports: [
+        
+    ],
     providers: [
         Logger,
         {provide: "APP_GLOBALS", useValue: APP_GLOBALS},

@@ -1,0 +1,31 @@
+
+// get the standard icon sizes from material design
+$hamburger-margin: 0px 16px 0px 0px !default;
+$hamburger-border-radius: 50% !default;
+$hamburger-line-height: 36px !default;
+$hamburger-font-weight: 500 !default;
+
+
+$sidenav-width: 240px;
+$sidebar-logo-offset: 16px;
+
+.hamburger {
+    background: transparent center center no-repeat;
+    cursor: pointer;
+    border: 0;
+    vertical-align: middle;
+
+    font-weight: $hamburger-font-weight;
+    color: currentColor;
+
+    margin: $hamburger-margin;
+    border-radius: $hamburger-border-radius;
+}
+
+#sidenav {
+    min-width: $sidenav-width;
+    .logo {
+        height: 56px;
+        padding-left: $sidebar-logo-offset;
+    }
+}

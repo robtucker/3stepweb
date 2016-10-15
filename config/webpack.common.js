@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 let extractCSS = new ExtractTextPlugin('css/[name].css');
@@ -65,6 +65,14 @@ const WEBPACK_CONFIG = exports.WEBPACK_CONFIG = {
         
         extractCSS,
         extractSASS,
+
+        new CopyWebpackPlugin(
+            [{ from: 'src/assets', to: 'img' }], //pattern
+            {ignore: ['humans.txt', 'robots.txt']} //options
+            ),
+
+        // copy humans.txt and robots.txt separately
+        new CopyWebpackPlugin([{ from: 'src/img', to: 'img' }]),
 
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
