@@ -1,18 +1,25 @@
-$custom-palette: (
-  50: #e3f2fd,
-  100: #bbdefb,
-  200: #90caf9,
-  300: #64b5f6,
-  400: #42a5f5,
-  500: #2196f3,
-  600: #1e88e5,
-  700: #1976d2,
-  800: #1565c0,
-  900: #0d47a1,
-  A100: #82b1ff,
-  A200: #448aff,
-  A400: #2979ff,
-  A700: #2962ff,
+// The brand primary needs to be converted into a palette
+// A palette is a map of different shades of the same colour
+// There is an awesome tool for doing that here: http://mcg.mbitson.com/
+// The resulting palette should be reimported below
+$brand-primary: #71c17d;
+$brandSecondary: #b53f83;
+
+$palette-3stepweb: (
+  50: #ffffff,
+  100: #f4faf5,
+  200: #cde9d2,
+  300: #9cd4a4,
+  400: #86ca90,
+  500: #71c17d,
+  600: #5cb86a,
+  700: #4aaa59,
+  800: #41954e,
+  900: #388043,
+  A100: #ffffff,
+  A200: #f4faf5,
+  A400: #86ca90,
+  A700: #4aaa59,
   contrast: (
     50: $black-87-opacity,
     100: $black-87-opacity,
@@ -31,6 +38,38 @@ $custom-palette: (
   )
 );
 
+$palette-3stepsecondary: (
+  50: #fffeff,
+  100: #ebc6d8,
+  200: #dd9cbb,
+  300: #ca6797,
+  400: #c25087,
+  500: #b53f78,
+  600: #9e3769,
+  700: #882f5a,
+  800: #71274b,
+  900: #5a1f3c,
+  A100: #fffeff,
+  A200: #ebc6d8,
+  A400: #c25087,
+  A700: #882f5a,
+    contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
 
 // Background palette for light themes.
 $md-light-theme-background: (

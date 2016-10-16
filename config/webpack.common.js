@@ -12,6 +12,14 @@ const APP_GLOBALS = exports.APP_GLOBALS = {
     LOG_LEVEL: 100,
 };
 
+// rather than copy the entire assets folder across
+// instead explicitly list the assets we are actually using
+// this might be a bit tedious but is probably worth it
+let assets = [
+    { from: 'assets/img/3step-logo-300.png', to: 'img'},
+    { from: 'assets/img/3step-logo-inverted-300.png', to: 'img'}
+];
+
 const WEBPACK_CONFIG = exports.WEBPACK_CONFIG = {
     context: process.env.NODE_PATH + "/src",
     entry: {
@@ -66,10 +74,7 @@ const WEBPACK_CONFIG = exports.WEBPACK_CONFIG = {
         extractCSS,
         extractSASS,
 
-        new CopyWebpackPlugin(
-            [{ from: 'assets/**'}],
-            {ignore: ['humans.txt', 'robots.txt']}
-        ),
+        new CopyWebpackPlugin(assets, {ignore: ['humans.txt', 'robots.txt']}),
 
         // copy humans.txt and robots.txt separately
         new CopyWebpackPlugin([

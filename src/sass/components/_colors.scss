@@ -1,6 +1,6 @@
-// background color mixin - accepts 2 params:
-// map: material design palette 
-// string: dark/light level
+// text color mixin - accepts 2 params:
+// @map: material design palette 
+// @string: dark/light level
 @mixin text-color ($palette, $level) {
     color: md-color($palette, $level);
 }

@@ -1,20 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Logger } from "./core";
+import { Logger } from "../core";
 
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app',
-  templateUrl: './app.template.html'
+  selector: 'design',
+  templateUrl: './design.template.html'
 })
-export class AppComponent implements OnInit { 
+export class DesignComponent implements OnInit { 
 
     public displayNav = true;
 
-    public appColor: 'primary';
-
-    public brand = ".3Step";
+    public brand = "3StepWeb";
 
     public pageHeight = "100%";
 

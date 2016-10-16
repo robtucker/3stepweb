@@ -1,0 +1,11 @@
+$margin-xs: 8px;
+$margin-sm: 16px;
+$margin-md: 24px;
+$margin-lg: 38px;
+$margin-xl: 56px;
+
+
+.margin-y-md {
+    margin-top: $margin-md;
+    margin-bottom: $margin-md;
+}

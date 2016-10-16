@@ -1,0 +1,27 @@
+<!-- full screen sidebar layout -->
+<md-sidenav-layout fullscreen class="left-navigation">
+
+  <!-- navbar with hamburger -->
+  <md-toolbar color="primary">
+    <button #hamburger class="hamburger" (click)="fireHamburger(sidenav)">
+      <i class="material-icons">menu</i>
+    </button>
+    <span class="logo">{{brand}}</span>
+  </md-toolbar>
+
+  <!-- side bar -->
+  <md-sidenav #sidenav id="sidenav" mode="over">
+    <div class="logo center primary padding-y-md border-bottom full-width font-size-xl">{{brand}}</div>
+    <md-nav-list>
+      <a md-list-item>Test1</a>
+      <a md-list-item>Test1</a>
+    </md-nav-list>
+  </md-sidenav>
+
+  <!-- application -->
+  <router-outlet></router-outlet>
+
+  <!-- footer -->
+  <footer></footer>
+
+</md-sidenav-layout>

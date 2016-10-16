@@ -10,9 +10,9 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
-$primary: md-palette($custom-palette);
+$primary: md-palette($palette-3stepweb, 600, 200, 800); //default, light, dark
 
-$accent:  md-palette($md-pink, A200, A100, A400);
+$accent:  md-palette($palette-3stepsecondary, 500, 200, 800); //default, light, dark 
 
 // The warn palette is optional (defaults to red).
 $warn:    md-palette($md-red);
@@ -30,7 +30,7 @@ $theme: md-light-theme($primary, $accent, $warn);
 // create another set of darker colours 
 // nested inside the 'dark-theme' selector
 .dark-theme {
-  $dark-primary: md-palette($md-indigo, 700, 500, 900);
+  $dark-primary: md-palette($md-indigo);
   $dark-accent:  md-palette($md-blue-grey, A200, A100, A400);
   $dark-warn:    md-palette($md-deep-orange);
 
@@ -43,7 +43,12 @@ $theme: md-light-theme($primary, $accent, $warn);
 // these classes are mostly designed to set 1 single value
 // these portable classes can usually be applied to any element
 @import "./components/backgrounds";
+@import "./components/borders";
 @import "./components/colors";
 @import "./components/icons";
+//@import "./components/images";
 @import "./components/layouts";
+@import "./components/margins";
 @import "./components/nav";
+@import "./components/paddings";
+@import "./components/text";

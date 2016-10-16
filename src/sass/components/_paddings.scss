@@ -1,0 +1,11 @@
+$padding-xs: 8px;
+$padding-sm: 16px;
+$padding-md: 24px;
+$padding-lg: 38px;
+$padding-xl: 56px;
+
+
+.padding-y-md {
+    padding-top: $margin-md;
+    padding-bottom: $margin-md;
+}
