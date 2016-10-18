@@ -10,38 +10,44 @@
     background-color: #fff;
 }
 
-.bg-primary {
-    $primary: map-get($theme, primary);
+.bg-black {
+    background-color: #000;
+}
 
-    @include bg-color($primary, 'default');
+.bg-primary {
+    @include bg-color(map-get($theme, primary), 'default');
 }
 
 .bg-primary-lighter {
-    $primary: map-get($theme, primary);
-
-    @include bg-color($primary, 'lighter');
+    @include bg-color(map-get($theme, primary), 'lighter');
 }
 
 .bg-primary-darker {
-    $primary: map-get($theme, primary);
+    @include bg-color(map-get($theme, primary), 'darker');
+}
 
-    @include bg-color($primary, 'darker');
+.bg-primary-alt {
+    background-color: #b4e0e1;
+}
+
+.bg-primary-alt-darker {
+    background-color: #224687;
 }
 
 .bg-accent {
-    $primary: map-get($theme, accent);
+    $accent: map-get($theme, accent);
 
-    @include bg-color($primary, 'default');
+    @include bg-color($accent, 'default');
 }
 
 .bg-accent-lighter {
-    $primary: map-get($theme, accent);
+    $accent: map-get($theme, accent);
 
-    @include bg-color($primary, 'lighter');
+    @include bg-color($accent, 'lighter');
 }
 
 .bg-accent-darker {
-    $primary: map-get($theme, accent);
+    $accent: map-get($theme, accent);
 
-    @include bg-color($primary, 'darker');
+    @include bg-color($accent, 'darker');
 }

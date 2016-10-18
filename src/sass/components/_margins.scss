@@ -4,8 +4,22 @@ $margin-md: 24px;
 $margin-lg: 38px;
 $margin-xl: 56px;
 
+.margin-y-sm {
+    margin-top: $margin-sm;
+    margin-bottom: $margin-sm;
+}
 
 .margin-y-md {
+    margin-top: $margin-md;
+    margin-bottom: $margin-md;
+}
+
+.margin-y-lg {
+    margin-top: $margin-md;
+    margin-bottom: $margin-md;
+}
+
+.margin-y-xl {
     margin-top: $margin-md;
     margin-bottom: $margin-md;
 }

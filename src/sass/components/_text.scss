@@ -3,11 +3,39 @@ $font-size-sm: 12px;
 $font-size-md: 16px;
 $font-size-lg: 20px;
 $font-size-xl: 26px;
+$font-size-xxl: 36px;
+
+.body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .font-size-xl {
     font-size: $font-size-xl;
 }
 
+.font-size-xxl {
+    font-size: $font-size-xxl;
+}
+
 .font-spacing-md {
     letter-spacing: 1px;
+}
+
+
+.lead {
+    //@extend .padding-y-xxl;
+    @extend .font-size-xxl;
+}
+
+.boxed {
+    width: auto;
+    display: block;
+    @extend .padding-y-md;
+    @extend .padding-x-md;
+    border: 3px solid white;
+    //border-radius: 25%;
+}
+
+.text-decoration-none {
+    text-decoration: none;
 }

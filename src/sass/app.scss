@@ -1,3 +1,8 @@
+// use the ayout from ng2-material extension
+// although we are trying to stick only with angular core here
+// the @angular/material layout features have not been shipped yet
+@import '~ng2-material/core/style/layout';
+
 @import '~@angular/material/core/theming/all-theme';
 
 // custom vars
@@ -10,9 +15,9 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
-$primary: md-palette($palette-3stepweb, 600, 200, 800); //default, light, dark
+$primary: md-palette($md-cyan); //default, light, dark
 
-$accent:  md-palette($palette-3stepsecondary, 500, 200, 800); //default, light, dark 
+$accent:  md-palette($md-indigo); //default, light, dark 
 
 // The warn palette is optional (defaults to red).
 $warn:    md-palette($md-red);
@@ -46,7 +51,7 @@ $theme: md-light-theme($primary, $accent, $warn);
 @import "./components/borders";
 @import "./components/colors";
 @import "./components/icons";
-//@import "./components/images";
+@import "./components/images";
 @import "./components/layouts";
 @import "./components/margins";
 @import "./components/nav";

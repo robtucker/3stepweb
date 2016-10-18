@@ -4,10 +4,10 @@ import { Logger } from "../core";
 
 @Component({
     selector: "home",
-    templateUrl: './templates/home.html'
+    templateUrl: './home.template.html'
 })
 export class HomeComponent {
     
-    construct(log: Logger) {}
+    constructor(private logger: Logger) {}
 
 }

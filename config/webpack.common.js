@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-let extractCSS = new ExtractTextPlugin('css/[name].css');
-let extractSASS = new ExtractTextPlugin('css/[name].css');
+let extractCSS = new ExtractTextPlugin('[name].css');
+let extractSASS = new ExtractTextPlugin('[name].css');
 
 const APP_GLOBALS = exports.APP_GLOBALS = {
     HISTORY_API_FALLBACK: true,
@@ -43,20 +43,18 @@ const WEBPACK_CONFIG = exports.WEBPACK_CONFIG = {
                 exclude: /node_modules\/!(material2)/,
                 loaders: ["awesome-typescript-loader", "angular2-router-loader", "angular2-template-loader"]
             },
-            { test: /\.css$/, loader: extractCSS.extract(['to-string-loader', 'css']) },
-            { test: /\.scss$/, loader: extractSASS.extract(['css','sass']) },
-            // {
-            //     test: /\.scss$/,
-            //     loader: ExtractTextPlugin.extract("style", "css!sass")
-            // },
-            //{ test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] }
-            // {
-            //     test: /\.css$/,
-            //     loader: ExtractTextPlugin.extract({
-            //         fallbackLoader: "style-loader",
-            //         loader: "css-loader"
-            //     })
-            // }
+            { 
+                test: /\.css$/, 
+                loader: extractCSS.extract(['to-string-loader', 'css']) 
+            },
+            { 
+                test: /\.scss$/, 
+                loader: extractSASS.extract(['css','sass']) 
+            },
+            {
+                test: /\.(jpg|png|gif)$/,
+                loader: 'file'
+            }
         ]
     },
     plugins: [
@@ -74,7 +72,7 @@ const WEBPACK_CONFIG = exports.WEBPACK_CONFIG = {
         extractCSS,
         extractSASS,
 
-        new CopyWebpackPlugin(assets, {ignore: ['humans.txt', 'robots.txt']}),
+        //new CopyWebpackPlugin(assets, {ignore: ['humans.txt', 'robots.txt']}),
 
         // copy humans.txt and robots.txt separately
         new CopyWebpackPlugin([

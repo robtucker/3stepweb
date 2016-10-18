@@ -1,11 +1,68 @@
-.img-logo-300 {
-    background-size: contain;
+$img-panel-height: 350px;
+
+// logos and other smaller images
+@mixin bg-img ($url, $size: contain, $height: auto){
+    height: $height;
+    background-position: center center;
+    background-size: $size;
     background-repeat: no-repeat;
-    background-image: url(../assets/img/3step-logo-300.png);
+    background-image: $url;
 }
 
-.img-logo-inverted-300 {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(../assets/img/3step-logo-inverted-300.png);
+@mixin overlay($color: rgba(0, 0, 0, 0.1)) {
+    width: 100%; 
+    height: 100%;
+    background-color: $color;
+}
+
+.overlay-20 {
+    @include overlay(rgba(0, 0, 0, 0.2))
+}
+
+.overlay-60 {
+    @include overlay(rgba(0, 0, 0, 0.6))
+}
+
+.img-logo-100 {
+    @include bg-img(url(../assets/img/3step-logo-300.png), contain, 100px);
+}
+
+.img-logo-inverted-100 {
+    @include bg-img(url(../assets/img/3step-logo-inverted-300.png), contain, 100px)
+}
+
+.img-landing {
+    @include bg-img(url(../assets/img/christmas-lights.jpg), auto)
+}
+
+.img-material-stack {
+    @include bg-img(url(../assets/img/material-stack.png), cover, $img-panel-height)
+}
+
+.img-material-colors {
+    @include bg-img(url(../assets/img/material-cyan.png), cover, $img-panel-height)
+}
+
+.img-development-logos {
+    @include bg-img(url(../assets/img/development-logos.png), contain, $img-panel-height)
+}
+
+.img-graph-db {
+    @include bg-img(url(../assets/img/graph-db.png), cover, $img-panel-height)  
+}
+
+.panel {
+    position: relative;
+}
+
+.panel:after {
+    height: 100%; width: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    content: "";
+    z-index: 1;
+}
+
+.panel:hover:after {
+    background-color: rgba(0, 0, 0, 0.1);
 }
