@@ -5,6 +5,9 @@
     color: md-color($palette, $level);
 }
 
+.transparent {
+    color: transparent;
+}
 // OOCSS classes for text colour
 .white {
     color: #fff;
@@ -27,6 +30,14 @@
 
     @include text-color($primary, 'darker');
 }
+
+.primary-alt {
+    color: #b4e0e1;
+}
+
+.primary-alt-darker {
+    color: #224687;
+} 
 
 .accent {
     $primary: map-get($theme, accent);

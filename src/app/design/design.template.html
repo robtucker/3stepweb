@@ -1,2 +1,13 @@
- <!--<iframe height="190" onload="this.width=screen.width" [src]="https://www.youtube.com/embed/cQzien5H2Do" frameborder="0" ></iframe>-->
-design
+<section (window:resize)="onResize($event)" class="padding-x-md">
+
+    <h1 class="primary-darker">Material Design</h1>
+    
+    <p>We work extensively with the Material Design spec.
+        Building animated components that have depth and motion.</p>
+
+    <iframe height="{{playerHeight}}" 
+            width="100%" 
+            src="https://www.youtube.com/embed/cQzien5H2Do">
+    </iframe>
+
+</section>

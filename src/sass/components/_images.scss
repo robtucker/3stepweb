@@ -32,11 +32,14 @@ $img-panel-height: 350px;
 }
 
 .img-landing {
-    @include bg-img(url(../assets/img/christmas-lights.jpg), auto)
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../assets/img/christmas-lights.jpg);
 }
 
 .img-material-stack {
-    @include bg-img(url(../assets/img/material-stack.png), cover, $img-panel-height)
+    @include bg-img(url(../assets/img/material-stack.png), contain, $img-panel-height)
 }
 
 .img-material-colors {
@@ -44,7 +47,9 @@ $img-panel-height: 350px;
 }
 
 .img-development-logos {
-    @include bg-img(url(../assets/img/development-logos.png), contain, $img-panel-height)
+    margin: 30px 30px 30px 30px;
+
+    @include bg-img(url(../assets/img/development-logos.png), contain, $img-panel-height - 30)
 }
 
 .img-graph-db {
@@ -62,6 +67,7 @@ $img-panel-height: 350px;
     content: "";
     z-index: 1;
 }
+
 
 .panel:hover:after {
     background-color: rgba(0, 0, 0, 0.1);

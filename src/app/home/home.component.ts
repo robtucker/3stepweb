@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ElementRef } from "@angular/core";
 
 import { Logger } from "../core";
 
@@ -8,6 +8,16 @@ import { Logger } from "../core";
 })
 export class HomeComponent {
     
-    constructor(private logger: Logger) {}
+    private landingImgHeight;
 
+    constructor(
+        private logger: Logger,
+        private elementRef: ElementRef) {
+        this.logger.debug(this.elementRef);
+        this.setLandingImgHeight();
+    }
+
+    setLandingImgHeight() {        
+       this.landingImgHeight = window.innerHeight * 2.9;
+    }
 }

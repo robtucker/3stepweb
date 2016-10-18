@@ -20,15 +20,13 @@ export class AppComponent implements OnInit {
 
     constructor(private logger: Logger) {}
 
-    fireHamburger(sidenav) {
-      this.logger.debug(this);
-      sidenav.toggle();
-    }
-    
     ngOnInit(): void {
       this.logger.debug(this.logger);
       this.logger.debug(this);
     }
 
-
+    navigate(sidenav, slug, color) {
+      sidenav.toggle();
+      this.appColor = color;
+    }
 }
