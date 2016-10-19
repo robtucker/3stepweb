@@ -55,6 +55,13 @@ $img-panel-height: 350px;
     @include bg-img(url(../assets/img/mobile-web2.png), contain, $img-panel-height)
 }
 
+.img-data-hexagons {
+    @include bg-img(url(../assets/img/data-hexagons.png), contain, $img-panel-height)
+}
+
+.img-elastic-logo {
+    @include bg-img(url(../assets/img/elasticsearch-logo.png), contain, $img-panel-height)
+}
 .panel {
     position: relative;
 }
