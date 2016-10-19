@@ -1,8 +1,8 @@
 // background color mixin - accepts 2 params:
 // map: material design palette 
 // string: dark/light level
-@mixin bg-color ($palette, $level) {
-    background-color: md-color($palette, $level);
+@mixin bg-color ($theme, $palette: primary, $level: 'default') {
+    background-color: md-color(map-get($theme, $palette), $level);
 }
 
 // OOCSS classes for backgrounds
@@ -14,40 +14,31 @@
     background-color: #000;
 }
 
+// MAIN THEME
 .bg-primary {
-    @include bg-color(map-get($theme, primary), 'default');
+    @include bg-color($main-theme, primary, 'default');
 }
 
-.bg-primary-lighter {
-    @include bg-color(map-get($theme, primary), 'lighter');
-}
-
-.bg-primary-darker {
-    @include bg-color(map-get($theme, primary), 'darker');
-}
-
-.bg-primary-alt {
+.bg-alt {
     background-color: #b4e0e1;
 }
 
-.bg-primary-alt-darker {
+.bg-alt-darker {
     background-color: #224687;
 }
 
-.bg-accent {
-    $accent: map-get($theme, accent);
+// INDIGO THEME
 
-    @include bg-color($accent, 'default');
+.indigo-theme {
+
+    .bg-primary {
+        @include bg-color($indigo-theme, primary, 'default');
+    }
+
+    .bg-alt {
+        background-color: #8e4497;
+    }
 }
 
-.bg-accent-lighter {
-    $accent: map-get($theme, accent);
 
-    @include bg-color($accent, 'lighter');
-}
 
-.bg-accent-darker {
-    $accent: map-get($theme, accent);
-
-    @include bg-color($accent, 'darker');
-}

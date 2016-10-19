@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { Logger } from "./core";
 
-import { ActivatedRoute } from "@angular/router";
+import { Router, ActivatedRoute, Route, NavigationEnd } from "@angular/router";
 
 @Component({
   selector: 'app',
@@ -12,23 +12,77 @@ export class AppComponent implements OnInit {
 
     @ViewChild('sidenav') sidenav;
 
-    public displayNav = true;
+    /**
+     * Currently selected route endpoint
+     */
+    private currentRoute: NavigationEnd;
 
-    public appColor: 'primary';
+    /**
+     * Display the navigation bar
+     */
+    public displayNav: boolean = true;
 
-    public brand = ".3Step";
+    /**
+     * Currently selected theme
+     */
+    public appTheme: string = 'main-theme';
 
-    public pageHeight = "100%";
+    /**
+     * Navbar brand text
+     */
+    public brand: string = ".3Step";
 
-    constructor(private logger: Logger) {}
+    /**
+     * Assign each page a color palette
+     */
+    private themes = {
+        home: 'main-theme',
+        design: 'indigo-theme',
+        development: 'indigo-theme',
+        data: 'indigo-theme',
+        about: 'indigo-theme'
+    };
 
+    /**
+     * Component constructor
+     */
+    constructor(
+      private logger: Logger,
+      private router: Router
+      ) {
+        this.router.events.subscribe((val: NavigationEnd) => {
+            this.currentRoute = val;
+            this.setAppTheme(val);
+        });
+      }
+
+    /**
+     * Component initialization lifecycle callback
+     */
     ngOnInit(): void {
-      this.logger.debug(this.sidenav);
+      this.logger.debug(this.currentRoute);
       this.logger.debug(this);
+      //this.setAppTheme();
     }
 
-    navigate(sidenav, slug, color) {
-      sidenav.toggle();
-      this.appColor = color;
+    /**
+     * Toggle the side drawer
+     */
+    toggleSidenav() {
+      this.sidenav.toggle();
     }
+
+    /**
+     *  Set the application's theme based on the route
+     */
+    setAppTheme(route: NavigationEnd) {
+        // get the current route name
+        let explode = route.url.split('/');
+        // default to the home theme
+        let slug = explode[0] || explode[1] || 'home'; 
+
+        //this.logger.debug(`route change detected: ${slug}`);
+        return this.appTheme = this.themes[slug] || 'default'
+    }
+
 }

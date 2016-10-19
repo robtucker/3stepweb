@@ -1,31 +1,33 @@
 <!-- full screen sidebar layout -->
-<md-sidenav-layout fullscreen class="left-navigation">
+<md-sidenav-layout fullscreen class="{{appTheme}} left-navigation">
 
   <!-- navbar with hamburger -->
-  <md-toolbar class="dark-theme" color="primary">
+  <md-toolbar color="primary">
     <button #hamburger class="hamburger" (click)="sidenav.toggle()">
       <i class="material-icons">menu</i>
     </button>
-    <a (click)="navigate('home')" (click)="sidenav.toggle()" class="logo text-decoration-none white">{{brand}}</a>
+    <a routerLink="/home" class="logo text-decoration-none white">{{brand}}</a>
   </md-toolbar>
 
   <!-- side bar -->
   <md-sidenav #sidenav id="sidenav" mode="over">
     <div class="center padding-y-sm border-bottom full-width">
-      <a routerLink="/home" class="logo primary font-size-xl text-decoration-none">{{brand}}</a>
+      <a routerLink="/home"  (click)="toggleSidenav()" class="logo primary font-size-xl text-decoration-none">
+          {{brand}}
+      </a>
     </div>
 
 
     <md-nav-list class="paddingless">
-      <a md-list-item  routerLink="/design" (click)="sidenav.toggle()">Design</a>
-      <a md-list-item  routerLink="/development" (click)="sidenav.toggle()">Development</a>
-      <a md-list-item  routerLink="/data" (click)="sidenav.toggle()">Data</a>
-      <a md-list-item  routerLink="/contact" (click)="sidenav.toggle()">Contact</a>
+      <a md-list-item  routerLink="/design" (click)="toggleSidenav()">Design</a>
+      <a md-list-item  routerLink="/development" (click)="toggleSidenav()">Development</a>
+      <a md-list-item  routerLink="/data" (click)="toggleSidenav()">Data</a>
+      <a md-list-item  routerLink="/contact" (click)="toggleSidenav()">Contact</a>
     </md-nav-list>
   </md-sidenav>
 
   <!-- application -->
-  <router-outlet class="dark-theme"></router-outlet>
+  <router-outlet></router-outlet>
 
 
   <!-- footer -->

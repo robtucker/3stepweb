@@ -10,6 +10,11 @@ $padding-xxl: 64px;
 }
 
 .padding-y-sm {
+    padding-top: $padding-xs;
+    padding-bottom: $padding-xs;
+}
+
+.padding-y-sm {
     padding-top: $padding-sm;
     padding-bottom: $padding-sm;
 }

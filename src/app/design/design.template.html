@@ -1,9 +1,43 @@
-<section (window:resize)="onResize($event)" class="padding-x-md">
-
-    <h1 class="primary-darker">Material Design</h1>
-    
+<section class="padding-x-lg padding-y-lg z-index-10">
+    <h1 class="primary">Material Design</h1>
     <p>We work extensively with the Material Design spec.
         Building animated components that have depth and motion.</p>
+</section>
+
+<section layout="row" layout-xs="column" layout-align="center center" class="bg-alt white">
+    <div layout="column" flex="100" class="padding-x-md padding-y-xl">
+        <h2 class="lead marginless">Design with depth</h2>
+        <h3>Our design philosophy focuses heavily on light, shading and depth.</h3>
+    </div>
+    <div layout="column" flex="100" class="img-material-depth full-width"></div>
+
+</section>
+
+
+<section layout="row" layout-align="center center" class="padding-y-lg">
+    <div layout="column" flex="100" class="padding-x-sm">
+        <div class="full-width" class="img-clientside-logos"></div>
+    </div>
+    <div layout="column" flex="100" class="padding-x-md">
+        <h2 class="primary" >Web and mobile in one.</h2>
+        <p>The days when you need a separate native mobile application are already over.</p>
+        <p>We build modern client-side applications in Angular2 and ReactJS that can be easily exported to mobile.</p>
+    </div>
+</section>
+
+<section layout="row" 
+        layout-align="center center" 
+        class=" img-material-curves white padding-x-lg padding-y-lg">
+    <div layout="column" flex-offset-gt-xs="50" >
+        <h2 class="lead marginless">Natural movements</h2>
+        <h3>Natural easing is used during transitions to create a sense of realistic movement</h3>
+    </div>
+</section>
+
+
+<section (window:resize)="onResize($event)">
+
+    <h3 class="padding-x-lg padding-y-lg">Learn more about Material design...</h3>
 
     <iframe height="{{playerHeight}}" 
             width="100%" 
@@ -12,11 +46,15 @@
 
 </section>
 
-<section layout="row" 
-        layout-align="center center" 
-        class="panel img-material-curves white padding-x-lg padding-y-lg text-decoration-none">
-    <div layout="column" flex-offset="50" >
-        <h2 class="lead marginless">Natural curves</h2>
-        <h3>Natural easing is used during transitions to create a sense of realistic movement</h3>
-    </div>
-</section>
+<!--<div id="background-wrap">
+  <div class="bubble x1"></div>
+  <div class="bubble x2"></div>
+  <div class="bubble x3"></div>
+  <div class="bubble x4"></div>
+  <div class="bubble x5"></div>
+  <div class="bubble x6"></div>
+  <div class="bubble x7"></div>
+  <div class="bubble x8"></div>
+  <div class="bubble x9"></div>
+  <div class="bubble x10"></div>
+</div>-->

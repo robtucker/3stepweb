@@ -19,7 +19,7 @@ import { Logger } from "../../core";
       <div class="full-width" class="{{imgClass}}"></div>
   </div>
 
-  <div layout="column" flex="100" layout-align="center start" class="padding-x-lg z-stack-10">
+  <div layout="column" flex="100" layout-align="center start" class="padding-x-lg z-index-10">
       <h2 class="lead marginless">{{title}}</h2>
       <h3>{{description}}</h3>
       <div layout="row" 
@@ -42,6 +42,7 @@ export class PanelLayout implements OnInit {
     @Input('reverse') reverse;
     @Input('link') link;
     @Input('imgClass') imgClass;
+    @Input('showBubbles') showBubbles;
 
     public borderColor;
 
@@ -50,6 +51,8 @@ export class PanelLayout implements OnInit {
     public btnBgColor;
 
     public hover = false;
+
+    private panelIndex;
 
     constructor(
         private logger: Logger, 
@@ -62,6 +65,7 @@ export class PanelLayout implements OnInit {
         this.btnColor = this.color
         this.btnBgColor = 'transparent';
         this.borderColor = `border-${ this.color }`;
+        // this.panelIndex = `z-index-${this.showBubbles ? 'minus-10 ': '10'}`;
     }
 
     onMouseEnter(): void {

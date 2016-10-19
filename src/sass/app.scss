@@ -1,48 +1,41 @@
-// use the ayout from ng2-material extension
-// although we are trying to stick only with angular core here
-// the @angular/material layout features have not been shipped yet
-@import '~ng2-material/core/style/layout';
-
+// get the main file from @angular/material
 @import '~@angular/material/core/theming/all-theme';
 
 // custom vars
-@import "./_theme";
+@import "_theme";
 
 // Include the base styles for Angular Material core. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 @include md-core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue.
-$primary: md-palette($md-cyan); //default, light, dark
+// MAIN THEME
+$primary-palette: md-palette($md-cyan); //default, light, dark
+$accent-palette:  md-palette($md-indigo); //default, light, dark 
+$warn-palette:    md-palette($md-red);
 
-$accent:  md-palette($md-indigo); //default, light, dark 
+$main-theme: md-light-theme($primary-palette, $accent-palette, $warn-palette);
 
-// The warn palette is optional (defaults to red).
-$warn:    md-palette($md-red);
-
-// Create the theme object (a Sass map containing all of the palettes).
-$theme: md-light-theme($primary, $accent, $warn);
-
-// NORMAL COLORS
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($theme);
-
-// DARK COLORS
-// create another set of darker colours 
-// nested inside the 'dark-theme' selector
-.dark-theme {
-  $dark-primary: md-palette($md-indigo);
-  $dark-accent:  md-palette($md-blue-grey, A200, A100, A400);
-  $dark-warn:    md-palette($md-deep-orange);
-
-  $dark-theme: md-dark-theme($dark-primary, $dark-accent, $dark-warn);
-
-  @include angular-material-theme($dark-theme);
+.main-theme {
+  @include angular-material-theme($main-theme);
 }
+
+// INDIGO THEME
+$indigo-primary-palette: md-palette($md-indigo);
+$indigo-accent-palette:  md-palette($md-blue-grey, A200, A100, A400);
+$indigo-warn-palette:    md-palette($md-deep-orange);
+
+$indigo-theme: md-light-theme($indigo-primary-palette, $indigo-accent-palette, $indigo-warn-palette);
+
+.indigo-theme {
+  @include angular-material-theme($indigo-theme);
+}
+
+// use the layout from ng2-material extension
+// the @angular/material layout features have not been shipped yet
+@import '~ng2-material/core/style/layout';
+
+// https://codepen.io/Mark_Bowley/pen/mEtqj
+// @import "bubbles";
 
 // OOCSS: Custom classes
 // these classes are mostly designed to set 1 single value

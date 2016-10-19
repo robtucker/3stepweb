@@ -1,6 +1,4 @@
-.block {
-    
-}
+
 .flex-fill {
     flex: 1 1 auto;
 }
@@ -33,10 +31,30 @@
     height: 50%;
 }
 
-.z-stack-10 {
+.z-index-0 {
+    z-index: 0;
+}
+
+.z-index-1 {
+    z-index: 1;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.z-index-10 {
     z-index: 10;
 }
 
-.z-stack-20 {
-    z-index: 20;
+.z-index-minus-1 {
+    z-index: -1;
+}
+
+.z-index-minus-2 {
+    z-index: -2;
+}
+
+.z-index-minus-10 {
+    z-index: -10;
 }

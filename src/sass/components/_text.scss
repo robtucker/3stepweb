@@ -1,14 +1,48 @@
+
+
+@font-face {
+    font-family: 'BrandonText-Regular';
+    src: url('../assets/fonts/brandon/2CFE1B_2_0.eot');
+    src: url('../assets/fonts/brandon/2CFE1B_2_0.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/brandon/2CFE1B_2_0.woff2') format('woff2'),
+        url('../assets/fonts/brandon/2CFE1B_2_0.woff') format('woff'),
+        url('../assets/fonts/brandon/2CFE1B_2_0.ttf') format('truetype');
+}
+
+.BrandonText-Regular {
+  font-family: BrandonText-Regular;
+}
+
+.roboto {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 $font-size-xs: 8px;
 $font-size-sm: 12px;
-$font-size-md: 16px;
+$font-size-md: 18px;
 $font-size-lg: 20px;
 $font-size-xl: 26px;
 $font-size-xxl: 36px;
+$font-size-xxxl: 48px;
 
-.body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.html, body, app {
+    font-family: BrandonText-Regular, Geneva, Tahoma, sans-serif;
 }
 
+h1 {
+    font-size: $font-size-xxl;
+}
+h2 {
+    font-size: $font-size-xl;
+}
+
+h3 {
+    font-size: $font-size-lg;
+}
+
+p {
+    font-size: $font-size-md;
+}
 .font-size-xl {
     font-size: $font-size-xl;
 }
@@ -21,6 +55,9 @@ $font-size-xxl: 36px;
     letter-spacing: 1px;
 }
 
+.logo {
+    @extend .roboto;
+}
 
 .lead {
     //@extend .padding-y-xxl;

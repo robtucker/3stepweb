@@ -17,6 +17,10 @@ $img-panel-height: 350px;
     @include bg-img(url(../assets/img/3step-logo-inverted-300.png), contain, 100px)
 }
 
+.img-clientside-logos {
+    @include bg-img(url(../assets/img/clientside-logos.png), contain, 300px)
+}
+
 .img-landing {
     background-color: rgba(0, 0, 0, 0.5);
     //background-position: center center;
@@ -45,6 +49,10 @@ $img-panel-height: 350px;
 
 .img-material-curves {
     @include bg-img(url(../assets/img/material-curves.png), cover, 450px)  
+}
+
+.img-material-depth {
+    @include bg-img(url(../assets/img/material-depth.png), cover, 450px)  
 }
 
 .panel {

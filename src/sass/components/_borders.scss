@@ -1,17 +1,22 @@
-$border-primary: 1px solid #e0e0e0;
+$border-gray: 1px solid #e0e0e0;
+
+@mixin border-color($theme, $palette: primary, $level: 'default') {
+    border-color: md-color(map-get($theme, $palette), $level);
+}
 
 .border-bottom {
-    border-bottom: $border-primary;
+    border-bottom: $border-gray;
 }
 
 .border-thick {
     border: 3px solid white;
 }
 
-.border-primary {
-    border-color: md-color(map-get($theme, primary), 'default');
-}
-
 .border-white {
     border-color: white;
 }
+
+.border-primary {
+    @include border-color($main-theme, primary, 'default');
+}
+
