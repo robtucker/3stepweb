@@ -35,6 +35,14 @@
         @include bg-color($indigo-theme, primary, 'default');
     }
 
+    .bg-primary-darker {
+        @include bg-color($indigo-theme, primary, 'darker');
+    }
+
+    .bg-primary-lighter {
+        @include bg-color($indigo-theme, primary, 500);
+    }
+
     .bg-alt {
         background-color: #8e4497;
     }

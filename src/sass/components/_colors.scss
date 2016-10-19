@@ -36,4 +36,16 @@
     }
 }
 
+.green-theme {
+    .primary {
+        @include text-color($green-theme, primary, 'default');
+    }
+}
+
+.pink-theme {
+    .primary {
+        @include text-color($pink-theme, primary, 'default');
+    }
+}
+
 

@@ -18,7 +18,13 @@ $img-panel-height: 350px;
 }
 
 .img-clientside-logos {
-    @include bg-img(url(../assets/img/clientside-logos.png), contain, 300px)
+    @include bg-img(url(../assets/img/clientside-logos3.png), contain, 250px)
+}
+
+.img-development-logos {
+    margin: 30px 30px 30px 30px;
+
+    @include bg-img(url(../assets/img/dev-langs-green.png), contain, $img-panel-height - 30)
 }
 
 .img-landing {
@@ -29,22 +35,12 @@ $img-panel-height: 350px;
     background-image: url(../assets/img/christmas-lights-green-cropped.jpg);
 }
 
-.img-material-stack {
-    @include bg-img(url(../assets/img/material-stack.png), contain, $img-panel-height)
-}
-
-.img-material-colors {
-    @include bg-img(url(../assets/img/material-cyan.png), cover, $img-panel-height)
-}
-
-.img-development-logos {
-    margin: 30px 30px 30px 30px;
-
-    @include bg-img(url(../assets/img/dev-langs-green.png), contain, $img-panel-height - 30)
-}
-
 .img-data {
     @include bg-img(url(../assets/img/nodeserver-logo-green-light.png), contain, $img-panel-height)
+}
+
+.img-material-stack {
+    @include bg-img(url(../assets/img/material-stack.png), contain, $img-panel-height)
 }
 
 .img-material-curves {
@@ -53,6 +49,10 @@ $img-panel-height: 350px;
 
 .img-material-depth {
     @include bg-img(url(../assets/img/material-depth.png), cover, 450px)  
+}
+
+.img-mobile-web {
+    @include bg-img(url(../assets/img/mobile-web2.png), contain, $img-panel-height)
 }
 
 .panel {

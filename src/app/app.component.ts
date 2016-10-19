@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
-import { Logger } from "./core";
+import { Logger, Utils } from "./core";
 
 import { Router, ActivatedRoute, Route, NavigationEnd } from "@angular/router";
 
@@ -16,6 +16,11 @@ export class AppComponent implements OnInit {
      * Currently selected route endpoint
      */
     private currentRoute: NavigationEnd;
+
+    /**
+     * Label of the current route
+     */
+    public currentRouteLabel: string;
 
     /**
      * Display the navigation bar
@@ -38,9 +43,9 @@ export class AppComponent implements OnInit {
     private themes = {
         home: 'main-theme',
         design: 'indigo-theme',
-        development: 'indigo-theme',
-        data: 'indigo-theme',
-        about: 'indigo-theme'
+        development: 'green-theme',
+        data: 'pink-theme',
+        contact: 'main-theme'
     };
 
     /**
@@ -48,7 +53,8 @@ export class AppComponent implements OnInit {
      */
     constructor(
       private logger: Logger,
-      private router: Router
+      private router: Router,
+      private utils: Utils
       ) {
         this.router.events.subscribe((val: NavigationEnd) => {
             this.currentRoute = val;
@@ -81,7 +87,10 @@ export class AppComponent implements OnInit {
         // default to the home theme
         let slug = explode[0] || explode[1] || 'home'; 
 
-        //this.logger.debug(`route change detected: ${slug}`);
+        this.logger.debug(`route change detected: ${slug}`);
+
+        this.currentRouteLabel = slug === 'home' ? '' : `- ${this.utils.ucfirst(slug)}`;
+        
         return this.appTheme = this.themes[slug] || 'default'
     }
 

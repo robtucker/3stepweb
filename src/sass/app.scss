@@ -30,6 +30,28 @@ $indigo-theme: md-light-theme($indigo-primary-palette, $indigo-accent-palette, $
   @include angular-material-theme($indigo-theme);
 }
 
+// BLUE THEME
+$pink-primary-palette: md-palette($md-pink);
+$pink-accent-palette:  md-palette($md-blue-grey, A200, A100, A400);
+$pink-warn-palette:    md-palette($md-deep-orange);
+
+$pink-theme: md-light-theme($pink-primary-palette, $pink-accent-palette, $pink-warn-palette);
+
+.pink-theme {
+  @include angular-material-theme($pink-theme);
+}
+
+// ORANGE THEME
+$green-primary-palette: md-palette($md-teal);
+$green-accent-palette:  md-palette($md-blue-grey, A200, A100, A400);
+$green-warn-palette:    md-palette($md-deep-orange);
+
+$green-theme: md-light-theme($green-primary-palette, $green-accent-palette, $green-warn-palette);
+
+.green-theme {
+  @include angular-material-theme($green-theme);
+}
+
 // use the layout from ng2-material extension
 // the @angular/material layout features have not been shipped yet
 @import '~ng2-material/core/style/layout';

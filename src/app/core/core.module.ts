@@ -2,6 +2,8 @@ import { ModuleWithProviders, NgModule, Optional, SkipSelf, OpaqueToken } from '
 import { CommonModule }      from '@angular/common';
 
 import { Logger } from "./services/logger.service";
+import { Utils } from './services/utils.service';
+
 import { APP_GLOBALS, AppConfig } from "./services/app-config.service";
 
 /**
@@ -13,10 +15,11 @@ import { APP_GLOBALS, AppConfig } from "./services/app-config.service";
         CommonModule
     ],
     exports: [
-        
+
     ],
     providers: [
         Logger,
+        Utils,
         {provide: "APP_GLOBALS", useValue: APP_GLOBALS},
         AppConfig,
     ]
