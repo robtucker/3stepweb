@@ -14,10 +14,10 @@ export class HomeComponent {
         private logger: Logger,
         private elementRef: ElementRef) {
         this.logger.debug(this.elementRef);
-        this.setLandingImgHeight();
+        //this.setLandingImgHeight();
     }
 
     setLandingImgHeight() {        
-       this.landingImgHeight = window.innerHeight * 2.9;
+       return this.landingImgHeight = (window.innerHeight * 0.8) + 'px';
     }
 }

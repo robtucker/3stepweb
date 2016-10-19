@@ -1,0 +1,37 @@
+@mixin overlay($color: rgba(0, 0, 0, 0.1)) {
+    width: 100%; 
+    height: 100%;
+    background-color: $color;
+}
+
+.overlay-20 {
+    @include overlay(rgba(0, 0, 0, 0.2))
+}
+
+.overlay-50 {
+    @include overlay(rgba(0, 0, 0, 0.5))
+}
+
+.overlay-60 {
+    @include overlay(rgba(0, 0, 0, 0.6))
+}
+
+.overlay-white-20 {
+    @include overlay(rgba(255, 255, 255, 0.2))
+}
+
+.overlay-white-50 {
+    @include overlay(rgba(255, 255, 255, 0.5))
+}
+
+.overlay-white-60 {
+    @include overlay(rgba(255, 255, 255, 0.6))
+}
+
+.overlay-white-70 {
+    @include overlay(rgba(255, 255, 255, 0.7))
+}
+
+.overlay-white-80 {
+    @include overlay(rgba(255, 255, 255, 0.8))
+}

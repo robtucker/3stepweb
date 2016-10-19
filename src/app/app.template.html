@@ -2,16 +2,19 @@
 <md-sidenav-layout fullscreen class="left-navigation">
 
   <!-- navbar with hamburger -->
-  <md-toolbar color="primary">
+  <md-toolbar class="dark-theme" color="primary">
     <button #hamburger class="hamburger" (click)="sidenav.toggle()">
       <i class="material-icons">menu</i>
     </button>
-    <a routerLink="/home" class="logo text-decoration-none white">{{brand}}</a>
+    <a (click)="navigate('home')" (click)="sidenav.toggle()" class="logo text-decoration-none white">{{brand}}</a>
   </md-toolbar>
 
   <!-- side bar -->
   <md-sidenav #sidenav id="sidenav" mode="over">
-    <div class="logo center primary padding-y-sm border-bottom full-width font-size-xxl">{{brand}}</div>
+    <div class="center padding-y-sm border-bottom full-width">
+      <a routerLink="/home" class="logo primary font-size-xl text-decoration-none">{{brand}}</a>
+    </div>
+
 
     <md-nav-list class="paddingless">
       <a md-list-item  routerLink="/design" (click)="sidenav.toggle()">Design</a>
@@ -22,7 +25,8 @@
   </md-sidenav>
 
   <!-- application -->
-  <router-outlet></router-outlet>
+  <router-outlet class="dark-theme"></router-outlet>
+
 
   <!-- footer -->
   <footer></footer>

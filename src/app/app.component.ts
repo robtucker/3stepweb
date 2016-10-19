@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { Logger } from "./core";
 
@@ -9,6 +9,8 @@ import { ActivatedRoute } from "@angular/router";
   templateUrl: './app.template.html'
 })
 export class AppComponent implements OnInit { 
+
+    @ViewChild('sidenav') sidenav;
 
     public displayNav = true;
 
@@ -21,7 +23,7 @@ export class AppComponent implements OnInit {
     constructor(private logger: Logger) {}
 
     ngOnInit(): void {
-      this.logger.debug(this.logger);
+      this.logger.debug(this.sidenav);
       this.logger.debug(this);
     }
 

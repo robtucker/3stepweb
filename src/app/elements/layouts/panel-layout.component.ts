@@ -66,7 +66,8 @@ export class PanelLayout implements OnInit {
 
     onMouseEnter(): void {
         this.btnColor = !this.bgColor ? 'primary' : this.bgColor.substr(3);
-        this.btnBgColor = !this.bgColor ? 'transparent' : 'bg-white';
+        //this.btnBgColor = !this.bgColor ? 'transparent' : 'bg-white';
+        this.btnBgColor = 'bg-white';
         this.hover = true;
     }
 

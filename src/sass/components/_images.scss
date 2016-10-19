@@ -9,20 +9,6 @@ $img-panel-height: 350px;
     background-image: $url;
 }
 
-@mixin overlay($color: rgba(0, 0, 0, 0.1)) {
-    width: 100%; 
-    height: 100%;
-    background-color: $color;
-}
-
-.overlay-20 {
-    @include overlay(rgba(0, 0, 0, 0.2))
-}
-
-.overlay-60 {
-    @include overlay(rgba(0, 0, 0, 0.6))
-}
-
 .img-logo-100 {
     @include bg-img(url(../assets/img/3step-logo-300.png), contain, 100px);
 }
@@ -32,10 +18,11 @@ $img-panel-height: 350px;
 }
 
 .img-landing {
-    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.5);
+    //background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../assets/img/christmas-lights.jpg);
+    background-image: url(../assets/img/christmas-lights-green-cropped.jpg);
 }
 
 .img-material-stack {
@@ -49,11 +36,15 @@ $img-panel-height: 350px;
 .img-development-logos {
     margin: 30px 30px 30px 30px;
 
-    @include bg-img(url(../assets/img/development-logos.png), contain, $img-panel-height - 30)
+    @include bg-img(url(../assets/img/dev-langs-green.png), contain, $img-panel-height - 30)
 }
 
-.img-graph-db {
-    @include bg-img(url(../assets/img/graph-db.png), cover, $img-panel-height)  
+.img-data {
+    @include bg-img(url(../assets/img/nodeserver-logo-green-light.png), contain, $img-panel-height)
+}
+
+.img-material-curves {
+    @include bg-img(url(../assets/img/material-curves.png), cover, 450px)  
 }
 
 .panel {
