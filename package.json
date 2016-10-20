@@ -46,7 +46,6 @@
     "html-webpack-plugin": "^2.22.0",
     "lodash": "^4.16.4",
     "material-design-icons": "^3.0.1",
-    "material2": "github:angular/material2",
     "ng2-material": "^0.6.1",
     "node-sass": "^3.10.0",
     "postcss-loader": "^0.13.0",
