@@ -1,3 +1,4 @@
+
 // text color mixin - accepts 2 params:
 // @map: material design palette 
 // @string: dark/light level
@@ -24,6 +25,9 @@
     color: #224687;
 } 
 
+.grey-light {
+    color: rgba(255, 255, 255, 0.55);
+}
 
 // APPLICATION COLOURS
 .primary {

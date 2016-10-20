@@ -3,6 +3,7 @@ import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 
 import { PanelLayout} from "./layouts/panel-layout.component";
+import { NextPage } from "./layouts/next-page.component";
 
 
 @NgModule({
@@ -11,10 +12,12 @@ import { PanelLayout} from "./layouts/panel-layout.component";
         RouterModule
     ],
     exports: [
-        PanelLayout
+        PanelLayout,
+        NextPage
     ],
     declarations: [
-        PanelLayout
+        PanelLayout,
+        NextPage
     ]
 })
 export class ElementsModule { }

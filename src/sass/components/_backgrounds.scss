@@ -49,8 +49,6 @@
 }
 
 // GREEN THEME 
-
-
 .green-theme {
 
     .bg-primary {
@@ -63,6 +61,22 @@
 
     .bg-primary-lighter {
         @include bg-color($green-theme, primary, 200);
+    }
+}
+
+// PINK THEME 
+.pink-theme {
+
+    .bg-primary {
+        @include bg-color($pink-theme, primary, 'default');
+    }
+
+    .bg-primary-darker {
+        @include bg-color($pink-theme, primary, 'darker');
+    }
+
+    .bg-primary-lighter {
+        @include bg-color($pink-theme, primary, 200);
     }
 }
 

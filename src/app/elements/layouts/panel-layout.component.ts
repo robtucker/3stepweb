@@ -29,7 +29,6 @@ import { Logger } from "../../core";
         <i [class.transparent]="hover" class="material-icons {{btnColor}} arrow-R" style="">arrow_forward</i>
       </div>
   </div>
-
 </a>
   `
 })
