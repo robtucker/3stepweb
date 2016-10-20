@@ -1,35 +1,40 @@
-<section class="padding-x-lg padding-y-lg z-index-10">
-    <h1 class="primary">Material Design</h1>
-    <p>We work extensively with the Material Design spec, building animated components that have depth and motion.</p>
+<section layout="column" layout-align="center center" class="container center">
+    <div class="max-width-600">
+        <h1 class="primary">Material Design</h1>
+        <p>We work extensively with the Material Design spec, building animated components that have depth and motion.</p>
+    </div>
 </section>
 
 <section layout="row" layout-xs="column" layout-align="center center" class="bg-alt white">
-    <div layout="column" flex="100" class="padding-x-lg padding-y-lg">
-        <h2 class="lead marginless">Light and depth</h2>
+    <!-- this pic is weird because it has to touch the outer edge - so the margins have been hacked -->
+    <div layout="column" flex="100" class="container-left padding-y-xl panel-item">
+        <h2>Light and depth</h2>
         <h3>Our design philosophy focuses heavily on shading and depth to build realistic interfaces.</h3>
     </div>
     <div layout="column" flex="100" class="img-material-depth full-width"></div>
 </section>
 
 
-<section layout="row" layout-xs="column" layout-align="center center" class="padding-y-lg">
-    <div layout="column" flex="100" class="padding-x-sm full-width">
+<section layout="row" layout-xs="column" layout-align="center center" class="container">
+    <div layout="column" flex="100" class="panel-item">
         <div class="img-mobile-web full-width"></div>
     </div>
-    <div layout="column" flex="100" class="padding-x-md max-width-400">
+    <div layout="column" flex="100" class="panel-item">
         <h2 class="primary" >Web and mobile in one.</h2>
         <p>The days when you need a separate native mobile application are over.</p>
         <p>We build modern client-side applications in Angular2 and ReactJS that can be easily exported to mobile.</p>
     </div>
 </section>
 
-<section layout="row" layout-xs="column" layout-align="center center" class="bg-primary-lighter white padding-y-lg">
-    <div layout="column" flex="100" class="padding-x-lg max-width-400">
-        <h2>Rich Javascript Applications</h2>
-        <p>We build modern client-side applications in Angular2 and ReactJS that can be easily exported to mobile.</p>
-    </div>
-    <div layout="column" flex="100" class="padding-x-sm full-width">
-        <div class="img-clientside-logos margin-x-sm full-width"></div>
+<section class="container bg-primary-lighter white ">
+    <div layout="row" layout-xs="column" layout-align="center center">
+        <div layout="column" flex="100" class="panel-item">
+            <h2>Rich Javascript Applications</h2>
+            <p>We build modern client-side applications in Angular2 and ReactJS that can be easily exported to mobile.</p>
+        </div>
+        <div layout="column" flex="100" class="panel-item">
+            <div class="img-clientside-logos full-width"></div>
+        </div>
     </div>
 </section>
 

@@ -3,6 +3,7 @@ $img-panel-height: 350px;
 // logos and other smaller images
 @mixin bg-img ($url, $size: contain, $height: auto){
     height: $height;
+    width: 100%;
     background-position: center center;
     background-size: $size;
     background-repeat: no-repeat;
@@ -55,26 +56,26 @@ $img-panel-height: 350px;
     @include bg-img(url(../assets/img/mobile-web2.png), contain, $img-panel-height)
 }
 
+.img-api-logos {
+    @include bg-img(url(../assets/img/node-django-white.png), contain, $img-panel-height)
+}
+
+.img-api-integrations {
+    @include bg-img(url(../assets/img/api-integrations.png), contain, $img-panel-height)
+}
+
+.img-golang-logo {
+    @include bg-img(url(../assets/img/golang-logo.png), contain, $img-panel-height)
+}
+
+.img-tdd {
+    @include bg-img(url(../assets/img/tdd.png), contain, $img-panel-height)
+}
+
 .img-data-hexagons {
     @include bg-img(url(../assets/img/data-hexagons.png), contain, $img-panel-height)
 }
 
 .img-elastic-logo {
     @include bg-img(url(../assets/img/elasticsearch-logo.png), contain, $img-panel-height)
-}
-.panel {
-    position: relative;
-}
-
-.panel:after {
-    height: 100%; width: 100%;
-    position: absolute;
-    top: 0; left: 0;
-    content: "";
-    z-index: 1;
-}
-
-
-.panel:hover:after {
-    background-color: rgba(0, 0, 0, 0.1);
 }

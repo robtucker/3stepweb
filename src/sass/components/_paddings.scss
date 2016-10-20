@@ -1,9 +1,3 @@
-$padding-xs:  8px;
-$padding-sm:  16px;
-$padding-md:  24px;
-$padding-lg:  38px;
-$padding-xl:  56px;
-$padding-xxl: 64px;
 
 .paddingless {
     padding: 0;
@@ -67,6 +61,13 @@ $padding-xxl: 64px;
     padding-right: $padding-xl;
 }
 
+.padding-top-xl {
+    padding-top: $padding-xl;
+}
+
 .padding-bottom-lg {
     padding-bottom: $padding-lg;
 }
+
+
+

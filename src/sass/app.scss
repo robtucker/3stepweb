@@ -62,9 +62,11 @@ $green-theme: md-light-theme($green-primary-palette, $green-accent-palette, $gre
 // OOCSS: Custom classes
 // these classes are mostly designed to set 1 single value
 // these portable classes can usually be applied to any element
+@import "variables";
 @import "./components/backgrounds";
 @import "./components/borders";
 @import "./components/colors";
+@import "./components/containers";
 @import "./components/icons";
 @import "./components/images";
 @import "./components/layouts";
@@ -72,4 +74,5 @@ $green-theme: md-light-theme($green-primary-palette, $green-accent-palette, $gre
 @import "./components/nav";
 @import "./components/overlays";
 @import "./components/paddings";
+@import "./components/panels";
 @import "./components/text";

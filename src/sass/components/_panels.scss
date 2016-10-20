@@ -1,0 +1,40 @@
+
+.panel {
+    position: relative;
+}
+
+.panel:after {
+    height: 100%; width: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    content: "";
+    z-index: 1;
+}
+
+
+.panel:hover:after {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 544px) { 
+    .panel-item {
+        margin-left: $padding-xs;
+        margin-right: $padding-xs;
+    }
+ }
+
+// quick hack because the angular materia repo does ot have any useful containers right now
+
+@media screen and (max-width: 1000px) { 
+    .panel-item {
+        margin-left: $padding-md;
+        margin-right: $padding-md;
+    }
+ }
+
+ @media only screen and (min-width: 1000px) { 
+    .panel-item {
+        margin-left: $padding-lg;
+        margin-right: $padding-lg;
+    }
+ }

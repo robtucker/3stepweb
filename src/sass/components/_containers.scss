@@ -1,0 +1,49 @@
+@media screen and (max-width: 544px) { 
+    .container {
+        padding-top: $container-y-sm;
+        padding-bottom: $container-y-sm;
+        padding-left: $container-x-sm;
+        padding-right: $container-x-sm;
+    }
+ }
+
+// quick hack because the angular materia repo does ot have any useful containers right now
+
+@media screen and (max-width: 1000px) { 
+    .container {
+        padding-top: $container-y-md;
+        padding-bottom: $container-y-md;
+        padding-left: $container-x-md;
+        padding-right: $container-x-md;
+    }
+ }
+
+ @media only screen and (min-width: 1000px) { 
+    .container {
+        padding-top: $container-y-lg;
+        padding-bottom: $container-y-lg;
+        padding-left: $container-x-lg;
+        padding-right: $container-x-lg;
+    }
+ }
+
+
+// another hack because of the annoying img-material-depth class on the design page
+// just simulates a container without the right hand side
+@media screen and (max-width: 544px) { 
+    .container-left {
+        padding-left: $container-x-sm;
+    }
+ }
+
+@media screen and (max-width: 1000px) { 
+    .container-left {
+        padding-left: $container-x-md;
+    }
+ }
+
+ @media only screen and (min-width: 1000px) { 
+    .container-left {
+        padding-left: $container-x-lg;
+    }
+ }

@@ -1,8 +1,4 @@
-$margin-xs: 8px;
-$margin-sm: 16px;
-$margin-md: 24px;
-$margin-lg: 38px;
-$margin-xl: 56px;
+
 
 .marginless {
     margin: 0px 0px 0px 0px !important;
@@ -19,11 +15,33 @@ $margin-xl: 56px;
 }
 
 .margin-y-lg {
-    margin-top: $margin-md;
-    margin-bottom: $margin-md;
+    margin-top: $margin-lg;
+    margin-bottom: $margin-lg;
 }
 
 .margin-y-xl {
-    margin-top: $margin-md;
-    margin-bottom: $margin-md;
+    margin-top: $margin-xl;
+    margin-bottom: $margin-xl;
 }
+
+.margin-x-sm {
+    margin-left: $margin-sm;
+    margin-right: $margin-sm;
+}
+
+.margin-x-md {
+    margin-left: $margin-md;
+    margin-right: $margin-md;
+}
+
+.margin-x-lg {
+    margin-left: $margin-lg;
+    margin-right: $margin-lg;
+}
+
+.margin-x-xl {
+    margin-left: $margin-xl;
+    margin-right: $margin-xl;
+}
+
+
