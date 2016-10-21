@@ -60,6 +60,7 @@ module.exports.WEBPACK_CONFIG = {
         new HtmlWebpackPlugin({
             title: '3StepWeb',
             template: 'index.ejs', 
+            favicon: '../src/assets/img/favicon.png',
             metas: [
                 {"charset": "utf-8"},
                 {"name": "author"},
