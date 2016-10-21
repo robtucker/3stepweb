@@ -1,11 +1,12 @@
-<section layout="row" layout-align="center center" id="background-wrap">
+<section class="img-landing white">
+  <div layout="row" layout-align="center center" class="overlay-40">
     <div class="center padding-x-lg padding-y-xl" >
       <h1 class="logo marginless">3StepWeb</h1>
       <h1 class="primary">Software that Inspires</h1>
       <h2 style="max-width: 550px;">3StepWeb is an alliance of highly skilled Software Engineers.
         We bring amazing projects to life through code.</h2>
     </div>
-
+  </div>
 </section>
 
 <panel-layout title="Design" 
@@ -37,11 +38,16 @@
             order="0">
 </panel-layout>
 
-<section class="img-landing center" >
-  <div class="overlay-white-70">
+<section class="img-bubbles center">
+  <div layout="row" layout-align="center center" class="overlay-white-70">
     <div class="padding-y-xxl">
-      <h2 class="margin-y-md">Get in touch</h2>
-      <h3 class="margin-y-md">What project are you working on?</h3>
+
+      <a routerLink="/contact" layout="row" layout-align="center center" 
+          class=" border-primary border-thick padding-x-sm text-decoration-none max-width-300"> 
+            <p class="padding-x-sm primary" style="font-size: 20px">Get in touch</p>
+            <i class="material-icons primary arrow-R" style="">arrow_forward</i>
+      </a>
+
     </div>
   </div>
 </section>

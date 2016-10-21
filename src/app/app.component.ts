@@ -61,7 +61,6 @@ export class AppComponent implements OnInit {
         //     this.currentRoute = val;
         //     this.setAppTheme(val);
         // });
-
          router.events.filter(event => event instanceof NavigationEnd).subscribe((val: NavigationEnd) => {
             this.currentRoute = val;
 

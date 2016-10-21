@@ -8,6 +8,14 @@
     @include overlay(rgba(0, 0, 0, 0.2))
 }
 
+.overlay-30 {
+    @include overlay(rgba(0, 0, 0, 0.3))
+}
+
+.overlay-40 {
+    @include overlay(rgba(0, 0, 0, 0.4))
+}
+
 .overlay-50 {
     @include overlay(rgba(0, 0, 0, 0.5))
 }

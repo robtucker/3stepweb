@@ -10,12 +10,17 @@ $img-panel-height: 350px;
     background-image: $url;
 }
 
-.img-logo-100 {
-    @include bg-img(url(../assets/img/3step-logo-300.png), contain, 100px);
-}
+// .img-logo-100 {
+//     @include bg-img(url(../assets/img/3step-logo-300.png), contain, 100px);
+// }
 
-.img-logo-inverted-100 {
-    @include bg-img(url(../assets/img/3step-logo-inverted-300.png), contain, 100px)
+// .img-logo-inverted-100 {
+//     @include bg-img(url(../assets/img/3step-logo-inverted-300.png), contain, 100px)
+// }
+
+.img-landing {
+    @include bg-img(url(../assets/img/wework.jpg), cover, 725px);
+    background-position: center top;
 }
 
 .img-clientside-logos {
@@ -28,7 +33,7 @@ $img-panel-height: 350px;
     @include bg-img(url(../assets/img/dev-langs-green.png), contain, $img-panel-height - 30)
 }
 
-.img-landing {
+.img-bubbles {
     background-color: rgba(0, 0, 0, 0.5);
     //background-position: center center;
     background-size: cover;

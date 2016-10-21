@@ -5,31 +5,29 @@ import { Logger } from "../../core";
 
 @Component({
   selector: 'panel-layout',
-   host: {
-    '(mouseenter)': 'onMouseEnter()',
-    '(mouseleave)': 'onMouseLeave()'
-  },
   template: `
-<a [routerLink]="link" 
-    layout="row" 
-    layout-xs="column" 
-    class="panel padding-y-lg text-decoration-none {{color}} {{bgColor}}">
+<div layout="row" layout-xs="column" 
+    [class.panel]="hover" class="padding-y-lg {{color}} {{bgColor}}">
 
   <div layout="column" flex="100" flex-order="0">
-      <div class="full-width" class="{{imgClass}}"></div>
+      <div class="full-width {{imgClass}}"></div>
   </div>
 
   <div layout="column" flex="100" layout-align="center start" class="padding-x-lg z-index-10">
       <h2 class="lead marginless">{{title}}</h2>
       <h3>{{description}}</h3>
-      <div layout="row" 
+      <!-- find out more button -->
+      <a [routerLink]="link" layout="row" 
           layout-align="center center" 
-          class="{{btnBgColor}} {{borderColor}} border-thick padding-x-sm"> 
+          class="{{btnBgColor}} {{borderColor}} border-thick padding-x-sm text-decoration-none"
+          (mouseenter)="onMouseEnter()"
+          (mouseleave)="onMouseLeave()"> 
         <p [class.transparent]="hover" class="padding-x-sm {{btnColor}}" style="font-size: 20px">Find out more</p>
         <i [class.transparent]="hover" class="material-icons {{btnColor}} arrow-R" style="">arrow_forward</i>
-      </div>
+      </a>
+
   </div>
-</a>
+</div>
   `
 })
 export class PanelLayout implements OnInit {
@@ -49,7 +47,7 @@ export class PanelLayout implements OnInit {
 
     public btnBgColor;
 
-    public hover = false;
+    public hover: boolean = false;
 
     private panelIndex;
 
