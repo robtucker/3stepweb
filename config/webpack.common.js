@@ -7,11 +7,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 let extractCSS = new ExtractTextPlugin('[name].css');
 let extractSASS = new ExtractTextPlugin('[name].css');
 
-const APP_GLOBALS = exports.APP_GLOBALS = {
-    HISTORY_API_FALLBACK: true,
-    LOG_LEVEL: 100,
-};
-
 // rather than copy the entire assets folder across
 // instead explicitly list the assets we are actually using
 // this might be a bit tedious but is probably worth it
@@ -20,7 +15,7 @@ let assets = [
     { from: 'assets/img/3step-logo-inverted-300.png', to: 'img'}
 ];
 
-const WEBPACK_CONFIG = exports.WEBPACK_CONFIG = {
+module.exports.WEBPACK_CONFIG = {
     context: process.env.NODE_PATH + "/src",
     entry: {
         main: "./main.ts",
@@ -63,7 +58,7 @@ const WEBPACK_CONFIG = exports.WEBPACK_CONFIG = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'CoderLab',
+            title: '3StepWeb',
             template: 'index.ejs', 
             metas: [
                 {"charset": "utf-8"},

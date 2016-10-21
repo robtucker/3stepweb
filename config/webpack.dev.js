@@ -15,9 +15,7 @@ const PORT = process.env.PORT = 3000;
 
 const APP_GLOBALS = helpers.mergeEnvironment({
     ENV: ENV,
-    HOST: HOST,
-    LOG_LEVEL: 200,
-    CONTACT_EMAIL: 'foo@bar.com'
+    HOST: HOST
 });
 
 //console.log(APP_GLOBALS);

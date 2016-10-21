@@ -1,5 +1,5 @@
 const webpackMerge = require('webpack-merge');
-
+const colors = require('colors');
 const commonConfig = require( "./webpack.common");
 
 /**
@@ -18,11 +18,13 @@ exports.mergeEnvironment = function(environment) {
         throw new Error("The environment does not contain an ENV property");
     }
 
+    console.log(`Merging environment variables for: ${environment.ENV}`.green);
+
     let isProd = (environment.ENV == 'production') || (environment.ENV == 'prod');
+    let commonGlobals = require(`./globals/common.json`);
+    let environmentGlobals = require(`./globals/${environment.ENV}.json`);
 
-    let globals = require(`./globals/${environment.ENV}.json`);
-
-    return webpackMerge(commonConfig.APP_GLOBALS, environment, globals, { IS_PROD: isProd });
+    return webpackMerge(commonGlobals, environmentGlobals, environment, { IS_PROD: isProd });
 };
 
 /**
