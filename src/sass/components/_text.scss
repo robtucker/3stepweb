@@ -17,14 +17,6 @@
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-$font-size-xs: 8px;
-$font-size-sm: 12px;
-$font-size-md: 18px;
-$font-size-lg: 20px;
-$font-size-xl: 26px;
-$font-size-xxl: 36px;
-$font-size-xxxl: 48px;
-
 .html, body, app {
     font-family: BrandonText-Regular, Geneva, Tahoma, sans-serif;
 }
@@ -43,6 +35,20 @@ h3 {
 p {
     font-size: $font-size-md;
 }
+
+.font-size-sm {
+    font-size: $font-size-sm;
+}
+
+.font-size-md {
+    font-size: $font-size-md;
+}
+
+.font-size-lg {
+    font-size: $font-size-lg;
+}
+
+
 .font-size-xl {
     font-size: $font-size-xl;
 }
