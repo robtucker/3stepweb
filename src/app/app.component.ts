@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 import { Logger, Utils } from "./core";
 
@@ -54,11 +54,25 @@ export class AppComponent implements OnInit {
     constructor(
       private logger: Logger,
       private router: Router,
-      private utils: Utils
-      ) {
-        this.router.events.subscribe((val: NavigationEnd) => {
+      private utils: Utils,
+      private element: ElementRef
+    ) {
+        // this.router.events.subscribe((val: NavigationEnd) => {
+        //     this.currentRoute = val;
+        //     this.setAppTheme(val);
+        // });
+
+         router.events.filter(event => event instanceof NavigationEnd).subscribe((val: NavigationEnd) => {
             this.currentRoute = val;
+
+            //element.nativeElement.scrollIntoView();
+
             this.setAppTheme(val);
+            
+            this.logger.debug('scrolling to window top');
+            this.logger.debug(element);
+            window.scrollTo(0, 0);
+
         });
       }
 

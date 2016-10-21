@@ -17,6 +17,7 @@ const APP_GLOBALS = helpers.mergeEnvironment({
     ENV: ENV,
     HOST: HOST,
     LOG_LEVEL: 200,
+    CONTACT_EMAIL: 'foo@bar.com'
 });
 
 //console.log(APP_GLOBALS);

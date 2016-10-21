@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Logger } from "../core";
+import { Logger, AppConfig } from "../core";
 
 @Component({
   selector: 'contact',
@@ -8,11 +8,19 @@ import { Logger } from "../core";
 })
 export class ContactComponent implements OnInit { 
 
-    constructor(private logger: Logger) {}
+    public contactEmail: string;
+
+    constructor(
+      private logger: Logger,
+      private config: AppConfig
+    ) {}
 
     ngOnInit(): void {
       this.logger.debug(this);
+
+      this.contactEmail = this.config.CONTACT_EMAIL;
     }
+
 
 
 }

@@ -13,13 +13,16 @@ exports.mergeWebpackConfig = function(config) {
  * merge env variables with the common env variables
  */
 exports.mergeEnvironment = function(environment) {
+
     if(!environment || !environment.ENV) {
         throw new Error("The environment does not contain an ENV property");
     }
 
     let isProd = (environment.ENV == 'production') || (environment.ENV == 'prod');
 
-    return webpackMerge(commonConfig.APP_GLOBALS, environment, { IS_PROD: isProd });
+    let globals = require(`./globals/${environment.ENV}.json`);
+
+    return webpackMerge(commonConfig.APP_GLOBALS, environment, globals, { IS_PROD: isProd });
 };
 
 /**
