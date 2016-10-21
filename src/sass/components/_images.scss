@@ -68,12 +68,20 @@ $img-panel-height: 350px;
     @include bg-img(url(../assets/img/golang-logo.png), contain, $img-panel-height)
 }
 
+.img-networks {
+    @include bg-img(url(../assets/img/networks.png), contain, $img-panel-height)
+}
+
+.img-levels {
+    @include bg-img(url(../assets/img/levels.png), contain, $img-panel-height)
+}
+
 .img-tdd {
     @include bg-img(url(../assets/img/tdd.png), contain, $img-panel-height)
 }
 
-.img-data-hexagons {
-    @include bg-img(url(../assets/img/data-hexagons.png), contain, $img-panel-height)
+.img-data-logos {
+    @include bg-img(url(../assets/img/devops-logos2.png), contain, $img-panel-height)
 }
 
 .img-elastic-logo {
