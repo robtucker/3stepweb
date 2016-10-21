@@ -23,6 +23,8 @@ exports.mergeEnvironment = function(environment) {
     let isProd = (environment.ENV == 'production') || (environment.ENV == 'prod');
     let commonGlobals = require(`./globals/common.json`);
     let environmentGlobals = require(`./globals/${environment.ENV}.json`);
+    console.log(environmentGlobals);
+
 
     return webpackMerge(commonGlobals, environmentGlobals, environment, { IS_PROD: isProd });
 };

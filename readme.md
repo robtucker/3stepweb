@@ -5,5 +5,6 @@ npm install
 npm run server
 ```
 
-navigate to localhost:3000/ in your browser
+Then navigate to localhost:3000/ in your browser.
 
+To compile the site for production use: `NODE_ENV=production webpack`
