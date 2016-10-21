@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
-import { Logger, Utils } from "./core";
+import { Logger, Utils, AppConfig} from "./core";
 
 import { Router, ActivatedRoute, Route, NavigationEnd } from "@angular/router";
 
@@ -32,6 +32,10 @@ export class AppComponent implements OnInit {
      */
     public appTheme: string = 'main-theme';
 
+    private contactEmail: string;
+
+    private contactPhone: string;
+
     /**
      * Navbar brand text
      */
@@ -53,6 +57,7 @@ export class AppComponent implements OnInit {
      */
     constructor(
       private logger: Logger,
+      private config: AppConfig,
       private router: Router,
       private utils: Utils,
       private element: ElementRef
@@ -81,7 +86,9 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
       this.logger.debug(this.currentRoute);
       this.logger.debug(this);
-      //this.setAppTheme();
+
+      this.contactEmail = this.config.CONTACT_EMAIL;
+      this.contactPhone = this.config.CONTACT_PHONE;
     }
 
     /**

@@ -10,7 +10,8 @@ export const APP_GLOBALS: AppConfigInterface = process.env;
  */
 export interface AppConfigInterface { 
     LOG_LEVEL: number;
-    CONTACT_EMAIL: string
+    CONTACT_EMAIL: string,
+    CONTACT_PHONE: string
 }
 
 /**
@@ -38,10 +39,12 @@ export class AppConfig implements AppConfigInterface {
 
     public LOG_LEVEL;
     public CONTACT_EMAIL;
+    public CONTACT_PHONE;
 
     constructor(@Inject("APP_GLOBALS") env: AppConfigInterface) {
         this.LOG_LEVEL = env.LOG_LEVEL;
-        this.CONTACT_EMAIL = env.CONTACT_EMAIL;
+        this.CONTACT_EMAIL = env.CONTACT_EMAIL;        
+        this.CONTACT_PHONE = env.CONTACT_PHONE;
     }
 
 }

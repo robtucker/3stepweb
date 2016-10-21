@@ -6,8 +6,9 @@
     <button #hamburger class="hamburger" (click)="sidenav.toggle()">
       <i class="material-icons">menu</i>
     </button>
-    <a routerLink="/home" class="logo text-decoration-none white">{{brand}}</a>
-    <span class="white">&nbsp;{{currentRouteLabel}}</span>
+    <a routerLink="/home" class="logo text-decoration-none white">{{currentRouteLabel || brand}}</a>
+    <span class="flex-fill"></span>
+    <span class="white">E: {{contactEmail}}</span>
   </md-toolbar>
 
   <!-- side bar -->
