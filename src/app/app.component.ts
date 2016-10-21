@@ -62,10 +62,6 @@ export class AppComponent implements OnInit {
       private utils: Utils,
       private element: ElementRef
     ) {
-        // this.router.events.subscribe((val: NavigationEnd) => {
-        //     this.currentRoute = val;
-        //     this.setAppTheme(val);
-        // });
          router.events.filter(event => event instanceof NavigationEnd).subscribe((val: NavigationEnd) => {
             this.currentRoute = val;
 
@@ -109,7 +105,7 @@ export class AppComponent implements OnInit {
 
         this.logger.debug(`route change detected: ${slug}`);
 
-        this.currentRouteLabel = slug === 'home' ? '' : `- ${this.utils.ucfirst(slug)}`;
+        this.currentRouteLabel = slug === 'home' ? '' : `${this.utils.ucfirst(slug)}`;
         
         return this.appTheme = this.themes[slug] || 'default'
     }
