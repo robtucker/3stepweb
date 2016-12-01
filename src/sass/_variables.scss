@@ -21,10 +21,11 @@ $container-y-md: $padding-lg;
 $container-x-lg: $padding-xxxl;
 $container-y-lg: $padding-lg;
 
-$font-size-xs: 8px;
-$font-size-sm: 12px;
-$font-size-md: 18px;
-$font-size-lg: 20px;
-$font-size-xl: 26px;
-$font-size-xxl: 36px;
-$font-size-xxxl: 48px;
+$font-size-xs:   .75rem !default;
+$font-size-sm:   .875rem !default;
+$font-size-base: 1rem !default;
+$font-size-md: 1.1rem !default;
+$font-size-lg:   1.35rem !default;
+$font-size-xl: 1.5rem !default;
+$font-size-xxl: 1.75rem !default;
+$font-size-xxxl: 2rem !default;

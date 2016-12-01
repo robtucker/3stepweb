@@ -8,7 +8,15 @@ import { Logger } from "../core";
 })
 export class DesignComponent implements OnInit { 
 
-    private playerHeight;
+    /**
+     * the height is a string containing the px sffix
+     */
+    private playerHeight: string;
+
+    /**
+     * Url to the project's repo
+     */
+    private repoUrl: string = "https://github.com/robtucker/3stepweb";
 
     constructor(
         private logger: Logger,
@@ -18,6 +26,7 @@ export class DesignComponent implements OnInit {
     ngOnInit(): void {
         this.logger.debug(this);
         this.setIframeHeight();
+        window.scrollTo(0, 0);
     }
 
     setIframeHeight() {

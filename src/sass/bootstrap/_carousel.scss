@@ -1,0 +1,55 @@
+// use the bootstrap v4 carousel components
+
+
+
+
+
+// Toggles
+//
+// Used in conjunction with global variables to enable certain theme features.
+
+@mixin box-shadow($shadow...) {
+  @if $enable-shadows {
+    box-shadow: $shadow;
+  }
+}
+
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    transition: $transition;
+  }
+}
+
+
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/carousel";
+
+
+//
+// Left/right controls for nav
+//
+
+.carousel-control {
+
+  // Set gradients for backgrounds
+  &.left {
+    @include gradient-x($start-color: rgba(0, 0, 0, 0), $end-color: rgba(0,0,0, 0));
+  }
+  &.right {
+    right: 0;
+    left: auto;
+    @include gradient-x($start-color: rgba(0,0,0,0), $end-color: rgba(0,0,0,0));
+  }
+
+  // Hover/focus state
+  @include hover-focus {
+    color: $carousel-control-color;
+    text-decoration: none;
+    outline: 0;
+    opacity: .9;
+  }
+}
+
+.carousel-panel {
+  height: 430px;
+}

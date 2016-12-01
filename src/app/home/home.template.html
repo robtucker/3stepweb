@@ -1,4 +1,4 @@
-<section class="img-landing white">
+<section class="img-landing white" style="max-height: 500px;">
   <div layout="row" layout-align="center center" class="overlay-40">
     <div class="center padding-x-lg padding-y-xl" >
       <h1 class="logo marginless">3StepWeb</h1>
@@ -9,35 +9,104 @@
   </div>
 </section>
 
-<panel-layout title="Design" 
+<section class="container margin-y-xl"> 
+  
+  <div layout-gt-xs="column" layout-gt-sm="row" layout-align="center center" >
+    <div class="padding-x-sm full-width">
+        <h1>Take our 24 hour hackathon challenge...</h1>
+        <p>We will design and ship a working website in 24 hours, including the following:</p>
+
+        <div layout="row" layout-align="start center" class="margin-y-sm">
+            <div class="icon icon-react margin-x-sm"></div>
+            <span>Javascript application in ReactJS</span>
+        </div>
+        <div layout="row" layout-align="start center" class="margin-y-sm">
+            <div class="icon icon-node margin-x-sm"></div>
+            <span>Node API with login system</span>
+        </div>
+        <div layout="row" layout-align="start center" class="margin-y-sm">
+            <div class="icon icon-db margin-x-sm"></div>
+            <span>Datbase layer in MongoDB or MySQL</span>
+        </div>
+
+        <p>If you like how we work and what we produce then we can talk about next steps.</p>
+    </div>
+    <div class="img-hackathon margin-x-sm"></div>
+  </div>
+</section>
+
+<section class="container margin-y-xl">
+  <div layout="column" layout-gt-xs="row" layout-align="center center" class="margin-y-sm">
+    <div class="icon icon-alan"></div>
+    <blockquote class="blockquote max-width-400">
+        <p>It's unbelievable how fast 3StepWeb move. They have a philosophy of 
+          putting action before theorizing. It works.</p>
+        <footer class="blockquote-footer">Alan Burns, <cite title="Source Title">CTO, FloFunder</cite></footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="container margin-y-xl center">
+  <div class="margin-bottom-md">
+      <h2>What can you expect from us...</h2>
+      <p>We have decades of experience building software. Here are some things we learned along the way...</p>
+  </div>
+  <div layout="column" layout-gt-sm="row" class="center" layout-align="center center">
+      <div layout="column" layout-align="center center" class="padding-x-sm">
+        <div class="icon icon-speed"></div>
+        <h4 class="margin-y-sm">Speed is key</h4>
+        <p>To develop high quality applications at lightening pace takes years of experience.</p>
+      </div>
+
+      <div layout="column" layout-align="center center" class="padding-x-sm">
+        <div class="icon icon-code"></div>
+        <h4 class="margin-y-sm">Let the code to the talking</h4>
+        <p>We take agile methodology to heart. We ship working software daily.</p>
+      </div>
+
+      
+      <div layout="column" layout-align="center center" class="padding-x-sm">
+        <div class="icon icon-quality"></div>
+        <h4 class="margin-y-sm">Never compromise on quality</h4>
+        <p>The way to be fast is to be good. Poor quality code will slow you down in the long run.</p>
+      </div>
+  </div>
+</section>
+
+
+<carousel interval="3000" noPause="false"> 
+  <slide>
+      <panel-layout title="Design" 
             description="We create rich web and mobile experiences using material design and javascript."
             link="/design"
             color="white"
             imgClass="img-material-stack"
             bgColor="bg-alt"
-            showBubbbles="true"
             order="0">
-</panel-layout>
-
-
-<panel-layout title="Development" 
+      </panel-layout>
+  </slide>
+  <slide>
+      <panel-layout title="Development" 
             description="We develop custom APIs and backend software using NodeJS, Python, and Golang."
             link="/development"
-            reverse="true"
-            color="primary"
+            color="white"
             imgClass="img-development-logos"
+            bgColor="bg-alt"
             order="-1">
-</panel-layout>
-
-<panel-layout title="Data" 
+      </panel-layout>
+  </slide>
+  <slide>
+      <panel-layout title="Data" 
             description="We build custom data stores with advanced machine learning algorithms."
             link="/data"
             color="white"
             imgClass="img-data"
-            bgColor="bg-alt-darker"
+            bgColor="bg-alt"
             order="0">
-</panel-layout>
-
+      </panel-layout>
+  </slide>
+</carousel>
+<!--
 <section class="img-bubbles center">
   <div layout="row" layout-align="center center" class="overlay-white-70">
     <div class="padding-y-xxl">
@@ -50,6 +119,6 @@
 
     </div>
   </div>
-</section>
+</section>-->
 
 <next-page nextPage="design"></next-page>

@@ -4,6 +4,11 @@
     margin: 0px 0px 0px 0px !important;
 }
 
+.margin-y-xs {
+    margin-top: $margin-xs;
+    margin-bottom: $margin-xs;
+}
+
 .margin-y-sm {
     margin-top: $margin-sm;
     margin-bottom: $margin-sm;
@@ -21,6 +26,27 @@
 
 .margin-y-xl {
     margin-top: $margin-xl;
+    margin-bottom: $margin-xl;
+}
+
+
+.margin-bottom-xs {
+    margin-bottom: $margin-xs;
+}
+
+.margin-bottom-sm {
+    margin-bottom: $margin-sm;
+}
+
+.margin-bottom-md {
+    margin-bottom: $margin-md;
+}
+
+.margin-bottom-lg {
+    margin-bottom: $margin-lg;
+}
+
+.margin-bottom-xl {
     margin-bottom: $margin-xl;
 }
 

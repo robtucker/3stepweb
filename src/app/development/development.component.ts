@@ -12,6 +12,10 @@ export class DevelopmentComponent implements OnInit {
     
     ngOnInit(): void {
       this.logger.debug(this);
+                  
+      // this.logger.debug('scrolling to window top');
+      // this.logger.debug(element);
+      window.scrollTo(0, 0);
     }
 
 

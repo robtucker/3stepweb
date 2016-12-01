@@ -69,10 +69,9 @@ export class AppComponent implements OnInit {
 
             this.setAppTheme(val);
             
-            this.logger.debug('scrolling to window top');
-            this.logger.debug(element);
-            window.scrollTo(0, 0);
-
+            // the reason window.scrollTo(0, 0) isn't working is because of the material design sidebar
+            // see this http://stackoverflow.com/questions/14622963/javascript-css-window-scrollto0-0-not-working
+            document.getElementById('navbar').scrollIntoView();
         });
       }
 

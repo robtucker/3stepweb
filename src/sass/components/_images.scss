@@ -23,22 +23,10 @@ $img-panel-height: 350px;
     background-position: center top;
 }
 
-.img-clientside-logos {
-    @include bg-img(url(../assets/img/clientside-logos3.png), contain, 250px)
-}
-
 .img-development-logos {
     margin: 30px 30px 30px 30px;
 
-    @include bg-img(url(../assets/img/dev-langs-green.png), contain, $img-panel-height - 30)
-}
-
-.img-bubbles {
-    background-color: rgba(0, 0, 0, 0.5);
-    //background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../assets/img/christmas-lights-green-cropped.jpg);
+    @include bg-img(url(../assets/img/dev-langs-purple.png), contain, $img-panel-height - 30)
 }
 
 .img-data {
@@ -59,6 +47,15 @@ $img-panel-height: 350px;
 
 .img-mobile-web {
     @include bg-img(url(../assets/img/mobile-web2.png), contain, $img-panel-height)
+}
+
+.img-github-logo {
+    @include bg-img(url(../assets/img/github-logo.png), contain, $img-panel-height)
+}
+
+.img-js-logos {
+    @include bg-img(url(../assets/img/js-logos.png), contain, auto);
+    min-height: 225px;
 }
 
 .img-api-logos {
@@ -91,4 +88,16 @@ $img-panel-height: 350px;
 
 .img-elastic-logo {
     @include bg-img(url(../assets/img/elasticsearch-logo.png), contain, $img-panel-height)
+}
+
+.img-hackathon {
+    @include bg-img(url(../assets/img/hackathon2.png), contain, 320px)
+}
+
+.img-angular {
+
+}
+
+.img-react {
+    
 }

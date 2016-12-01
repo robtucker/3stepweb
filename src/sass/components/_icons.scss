@@ -1,4 +1,57 @@
+.icon {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+// logos and other smaller images
+@mixin icon-img ($url, $size: 100px){
+    min-height: $size;
+    min-width: $size;
+    height: $size;
+    width: $size;
+    background-image: $url;
+}
+
+$icon-size: 100px;
+$icon-size-xs: 30px;
 
 .logo {
     @extend .font-spacing-md;
+}
+
+.icon-speed {
+    @include icon-img (url(../assets/icons/calendar.png), $icon-size);
+}
+
+.icon-quality {
+    @include icon-img (url(../assets/icons/quality.png), $icon-size);
+}
+
+.icon-code {
+    @include icon-img (url(../assets/icons/code.png), $icon-size);
+}
+
+.icon-alan {
+    @include icon-img (url(../assets/icons/alan_burns.jpg), 150px); 
+}
+
+.icon-hourglass {
+    @extend .bg-primary;
+    @include icon-img (url(../assets/icons/hourglass.png), 200px); 
+}
+
+.icon-react {
+    @include icon-img (url(../assets/icons/react.png), $icon-size-xs); 
+    background-color: #224687;
+}
+
+.icon-node {
+    @include icon-img (url(../assets/icons/node.png), $icon-size-xs); 
+    background-color: #224687;
+}
+
+.icon-db {
+    @include icon-img (url(../assets/icons/db.png), $icon-size-xs); 
+    background-color: #224687;
 }

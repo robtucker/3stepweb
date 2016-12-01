@@ -1,5 +1,4 @@
 import { Component, ElementRef } from "@angular/core";
-
 import { Logger } from "../core";
 
 @Component({
@@ -14,10 +13,14 @@ export class HomeComponent {
         private logger: Logger,
         private elementRef: ElementRef) {
         this.logger.debug(this.elementRef);
-        //this.setLandingImgHeight();
+        this.setLandingImgHeight();
+    }
+
+    ngOnInit() {
+        
     }
 
     setLandingImgHeight() {        
-       return this.landingImgHeight = (window.innerHeight * 0.8) + 'px';
+       return this.landingImgHeight = (window.innerHeight * 0.6) + 'px';
     }
 }

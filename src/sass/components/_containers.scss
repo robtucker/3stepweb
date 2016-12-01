@@ -1,7 +1,7 @@
 @media screen and (max-width: 544px) { 
     .container {
-        padding-top: $container-y-sm;
-        padding-bottom: $container-y-sm;
+        // padding-top: $container-y-sm;
+        // padding-bottom: $container-y-sm;
         padding-left: $container-x-sm;
         padding-right: $container-x-sm;
     }
@@ -11,8 +11,8 @@
 
 @media screen and (max-width: 1000px) { 
     .container {
-        padding-top: $container-y-md;
-        padding-bottom: $container-y-md;
+        // padding-top: $container-y-md;
+        // padding-bottom: $container-y-md;
         padding-left: $container-x-md;
         padding-right: $container-x-md;
     }
@@ -20,8 +20,8 @@
 
  @media only screen and (min-width: 1000px) { 
     .container {
-        padding-top: $container-y-lg;
-        padding-bottom: $container-y-lg;
+        // padding-top: $container-y-lg;
+        // padding-bottom: $container-y-lg;
         padding-left: $container-x-lg;
         padding-right: $container-x-lg;
     }

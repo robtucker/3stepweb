@@ -7,22 +7,22 @@ import { Logger } from "../../core";
   selector: 'panel-layout',
   template: `
 <div layout="row" layout-xs="column" 
-    [class.panel]="hover" class="padding-y-lg {{color}} {{bgColor}}">
+    [class.panel]="hover" class="padding-y-lg {{color}} {{bgColor}}" style="min-height: 450px;">
 
-  <div layout="column" flex="100" flex-order="0">
+  <div layout="column" flex="100" flex-order="0" class="hidden-sm-down">
       <div class="full-width {{imgClass}}"></div>
   </div>
 
-  <div layout="column" flex="100" layout-align="center start" class="padding-x-lg z-index-10">
+  <div layout="column" flex="100" layout-align="center start" class="z-index-10 margin-y-sm">
       <h2 class="lead marginless">{{title}}</h2>
-      <h3>{{description}}</h3>
+      <h3 class="margin-y-sm">{{description}}</h3>
       <!-- find out more button -->
       <a [routerLink]="link" layout="row" 
           layout-align="center center" 
           class="{{btnBgColor}} {{borderColor}} border-thick padding-x-sm text-decoration-none"
           (mouseenter)="onMouseEnter()"
           (mouseleave)="onMouseLeave()"> 
-        <p [class.transparent]="hover" class="padding-x-sm {{btnColor}}" style="font-size: 20px">Find out more</p>
+        <p [class.transparent]="hover" class="padding-x-sm padding-y-sm marginless {{btnColor}}" style="font-size: 20px">Find out more</p>
         <i [class.transparent]="hover" class="material-icons {{btnColor}} arrow-R" style="">arrow_forward</i>
       </a>
 
