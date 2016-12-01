@@ -91,13 +91,5 @@ $img-panel-height: 350px;
 }
 
 .img-hackathon {
-    @include bg-img(url(../assets/img/hackathon2.png), contain, 320px)
-}
-
-.img-angular {
-
-}
-
-.img-react {
-    
+    @include bg-img(url(../assets/img/hackathon2.png), contain, 349px)
 }
