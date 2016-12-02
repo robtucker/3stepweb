@@ -19,13 +19,12 @@
             </div>
         </div>
         
-        <md-nav-list class="sidebar padding-y-lg">
-            <p class="padding-x-lg"><b>Case studies</b></p>
+        <md-nav-list class="sidebar padding-y-lg card">
+            <p class="padding-x-lg margin-bottom-md"><b>Case studies</b></p>
             <a *ngFor="let showcase of showcases" 
                 routerLink="/showcase/{{showcase.id}}">
-                    <div class="padding-x-lg padding-y-sm"
-                        [class.bg-gray-active]="routeActive(showcase.id)"
-                        [class.sidebar-hover]="!routeActive(showcase.id)">
+                    <div class="sidebar-hover padding-x-lg padding-y-sm"
+                        [class.bg-gray-active]="routeActive(showcase.id)">
                         {{showcase.title}}
                     </div>
             </a>

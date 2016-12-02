@@ -66,6 +66,7 @@ $green-theme: md-light-theme($green-primary-palette, $green-accent-palette, $gre
 @import "variables";
 @import "./components/backgrounds";
 @import "./components/borders";
+@import "./components/card";
 @import "./components/colors";
 @import "./components/containers";
 @import "./components/icons";
