@@ -105,7 +105,12 @@ $img-panel-height: 350px;
 
 .img-flofunder2 {
     @include bg-img(url(../assets/showcase/flofunder-architecture.png), cover, $img-panel-height)
-    
 }
 
+.img-readwave1 {
+    @include bg-img(url(../assets/showcase/readwave-logo.jpg), cover, $img-panel-height)
+}
 
+.img-readwave2 {
+    @include bg-img(url(../assets/showcase/readwave-editor.jpg), cover, $img-panel-height)
+}
