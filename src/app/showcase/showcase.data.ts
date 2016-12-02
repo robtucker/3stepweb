@@ -65,5 +65,24 @@ export const SHOWCASES: Showcase[] = [
         stack: ['Silex', 'php', 'Mysql', 'Redis'],
         imgClass1: 'img-readwave1',
         imgClass2: 'img-readwave2',
+    },
+    {
+        id: 4,
+        title: "VEEA", 
+        client: 'Mashed Apps',
+        location: 'Stockholm',
+        sector: 'Hospitality',
+        type: 'Backend Infrastructure',
+        description: `ReadWave is a writing community which allows users to share 3 minute stories, 
+            enter writing competitions and discuss their stories.`,
+        problem: `After the successful launch of Drinkz, we were asked to develop the backend 
+            solution for the VEEA MVP app.`,
+        solution: `Using the core REST api software from the DrinkZ project, we built a new 
+            database schema and entity relationship model. We implemented new use cases to 
+            meet the app requirements and deployed our code for the app development team 
+            to build against.`,
+        stack: ['Lumen', 'php', 'Mysql', 'Redis'],
+        imgClass1: 'img-veea1',
+        imgClass2: 'img-veea2',
     }
 ];
