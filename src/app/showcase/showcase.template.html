@@ -1,0 +1,37 @@
+<div  class="container bg-gray padding-y-xl">
+
+    <div  layout-xs="column" layout-sm="column"  layout="row" layout-align="center start">
+        <div class="min-width-600 padding-x-lg">
+            <div class="margin-bottom-lg">
+                <h1>{{ s.title }}</h1>
+                <p>{{ s.description }}</p>
+                <iframe *ngIf="s.iframe" [src]="s.iframe | safe" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <div *ngIf="!s.iframe" class="{{s.imgClass1}}"></div>
+            </div>
+            <div class="margin-bottom-md">
+                <h3>The problem</h3>
+                <p>{{ s.problem }}</p>
+            </div>
+            <div class="{{s.iframe ? s.imgClass1 : s.imgClass2 }} margin-bottom-lg"></div>
+            <div class="margin-bottom-md">
+                <h3>The solution</h3>
+                <p>{{ s.solution }}</p>
+            </div>
+        </div>
+        
+        <md-nav-list class="sidebar padding-y-lg">
+            <p class="padding-x-lg"><b>Case studies</b></p>
+            <a *ngFor="let showcase of showcases" 
+                routerLink="/showcase/{{showcase.id}}">
+                    <div class="padding-x-lg padding-y-sm"
+                        [class.bg-gray-active]="routeActive(showcase.id)"
+                        [class.sidebar-hover]="!routeActive(showcase.id)">
+                        {{showcase.title}}
+                    </div>
+            </a>
+        </md-nav-list>
+
+    </div>
+</div>
+
+<next-page nextPage="design"></next-page>

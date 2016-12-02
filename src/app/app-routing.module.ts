@@ -8,6 +8,7 @@ import { DesignComponent } from './design/design.component';
 import { DevelopmentComponent } from './development/development.component';
 import { DataComponent } from './data/data.component';
 import { ContactComponent } from './contact/contact.component';
+import { ShowcaseComponent } from './showcase/showcase.component';
 
 const ROUTES: Routes = [
     { path: '', component: HomeComponent },
@@ -16,10 +17,8 @@ const ROUTES: Routes = [
     { path: 'development', component: DevelopmentComponent },
     { path: 'data', component: DataComponent },
     { path: 'contact', component: ContactComponent },
-    // lazy load the showcases
-    //{ path: 'showcase', loadChildren: './showcase/showcase.module#ShowcaseModule' }
+    { path: 'showcase/:id', component: ShowcaseComponent},
     { path: '**', component: AbortComponent },
-
 ];
 
 @NgModule({

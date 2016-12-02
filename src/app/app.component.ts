@@ -46,6 +46,7 @@ export class AppComponent implements OnInit {
      */
     private themes = {
         home: 'main-theme',
+        showcase: 'main-theme',
         design: 'indigo-theme',
         development: 'green-theme',
         data: 'pink-theme',

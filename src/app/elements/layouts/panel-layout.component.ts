@@ -6,26 +6,27 @@ import { Logger } from "../../core";
 @Component({
   selector: 'panel-layout',
   template: `
-<div layout="row" layout-xs="column" 
-    [class.panel]="hover" class="padding-y-lg {{color}} {{bgColor}}" style="min-height: 450px;">
+<div layout="row" layout-xs="column" layout-align="center center"
+    [class.panel]="hover" class="padding-y-lg {{color}} {{bgColor}}" style="min-height: 456px;">
 
   <div layout="column" flex="100" flex-order="0" class="hidden-sm-down">
       <div class="full-width {{imgClass}}"></div>
   </div>
 
-  <div layout="column" flex="100" layout-align="center start" class="z-index-10 margin-y-sm">
-      <h2 class="lead marginless">{{title}}</h2>
-      <h3 class="margin-y-sm">{{description}}</h3>
-      <!-- find out more button -->
-      <a [routerLink]="link" layout="row" 
-          layout-align="center center" 
-          class="{{btnBgColor}} {{borderColor}} border-thick padding-x-sm text-decoration-none"
-          (mouseenter)="onMouseEnter()"
-          (mouseleave)="onMouseLeave()"> 
-        <p [class.transparent]="hover" class="padding-x-sm padding-y-sm marginless {{btnColor}}" style="font-size: 20px">Find out more</p>
-        <i [class.transparent]="hover" class="material-icons {{btnColor}} arrow-R" style="">arrow_forward</i>
-      </a>
-
+  <div layout="column" layout-align="center center" class="full-width">
+      <div layout="column" flex="100" layout-align="center start" class="z-index-10">
+        <h2 class="lead marginless">{{title}}</h2>
+        <h3 class="margin-y-sm max-width-500">{{description}}</h3>
+        <!-- find out more button -->
+        <a [routerLink]="link" layout="row" 
+            layout-align="center center" 
+            class="{{btnBgColor}} {{borderColor}} border-thick padding-x-sm text-decoration-none"
+            (mouseenter)="onMouseEnter()"
+            (mouseleave)="onMouseLeave()"> 
+            <p [class.transparent]="hover" class="padding-x-sm padding-y-sm marginless {{btnColor}}" style="font-size: 20px">Find out more</p>
+            <i [class.transparent]="hover" class="material-icons {{btnColor}} arrow-R" style="">arrow_forward</i>
+        </a>
+      </div>
   </div>
 </div>
   `

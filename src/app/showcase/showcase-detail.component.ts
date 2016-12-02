@@ -21,7 +21,7 @@ import { ShowcaseService } from "./showcase.service";
     selector: "showcase-detail",
     templateUrl: './templates/showcase-detail.html',
 })
-export class ShowcaseDetailComponent implements OnInit {
+export class ShowcaseComponent implements OnInit {
 
     /**
      * currently selected showcase

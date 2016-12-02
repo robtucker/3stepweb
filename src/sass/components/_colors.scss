@@ -34,6 +34,10 @@
     @include text-color($main-theme, primary, 'default');
 }
 
+.primary-alt-darker {
+    color: #224687;
+}
+
 .indigo-theme {
     .primary {
         @include text-color($indigo-theme, primary, 'default');

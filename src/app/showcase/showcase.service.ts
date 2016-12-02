@@ -3,18 +3,21 @@ import { Injectable } from "@angular/core";
 import * as _ from "lodash";
 
 import { Showcase } from "./showcase";
-import { SHOWCASES } from "./showcase.mock";
+import { SHOWCASES } from "./showcase.data";
+import { find } from "lodash";
 
 @Injectable()
 export class ShowcaseService {
+
+    getAll(): Showcase[] {
+        return SHOWCASES;
+    }
+    
     /**
      * Simulate an async call with a promise
      */
-    index(): Promise<Showcase[]> {
-        return Promise.resolve(SHOWCASES);
+    getById(id: number): Showcase {
+        return SHOWCASES[id - 1];
     }
-
-    getById(id: number): Promise<Showcase> {
-        return Promise.resolve(_.find(SHOWCASES, {id: id}));
-    }
+    
 }

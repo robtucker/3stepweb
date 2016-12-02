@@ -20,7 +20,7 @@ import { ShowcaseService } from "./showcase.service";
  */
 @Component({
     selector: "showcase",
-    template: '<router-outlet></router-outlet>',
+    templateUrl: './showcase.template.html',
     //providers: [ShowcaseService]
 })
 export class ShowcaseComponent implements OnInit {
@@ -33,7 +33,7 @@ export class ShowcaseComponent implements OnInit {
     /**
      * currently selected showcase
      */
-    public selectedShowcase: Showcase;
+    public s: Showcase;
 
     constructor(
         private showcaseService: ShowcaseService,
@@ -44,19 +44,23 @@ export class ShowcaseComponent implements OnInit {
         public config: AppConfig
     ) {}
 
-    getShowcases() {
-        this.showcaseService.index().then(showcases => this.showcases = showcases);
-    }
-
     ngOnInit(): void {
+        this.showcases = this.showcaseService.getAll();;
+        this.getSelectedShowcase();
         this.logger.debug('Initializing showcase component');
-        this.logger.debug(JSON.stringify(this.config));
-
-        this.getShowcases();
+        this.logger.debug(this);
     }
 
-    gotoShowcase(showcase: Showcase): void {
-        let link = ['/detail', showcase.id];
-        this.router.navigate(link);
+    getSelectedShowcase() { 
+        this.route.params.forEach((params: Params) => {
+            let id = +params['id']; // (+) converts string 'id' to a number
+            this.s = this.showcaseService.getById(id);
+        });
+    }
+
+    routeActive(id: number): boolean {
+        let res = this.s.id === id;
+        console.log('checing if route is active: ' + res);
+        return res;
     }
 }

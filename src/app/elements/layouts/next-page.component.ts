@@ -18,6 +18,7 @@ import { Logger , Utils } from "../../core";
 export class NextPage implements OnInit {
 
     @Input('nextPage') nextPage;
+    @Input('label') label;
 
     private title: string;
 
@@ -29,6 +30,6 @@ export class NextPage implements OnInit {
     ngOnInit () {
         this.logger.log(this);
 
-        this.title = this.utils.ucfirst(this.nextPage);
+        this.title = this.label || this.utils.ucfirst(this.nextPage);
     }
 }

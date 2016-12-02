@@ -3,6 +3,7 @@
 
 // custom vars
 @import "_theme";
+@import "~bootstrap/scss/variables";
 
 // Include the base styles for Angular Material core. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -75,13 +76,11 @@ $green-theme: md-light-theme($green-primary-palette, $green-accent-palette, $gre
 @import "./components/overlays";
 @import "./components/paddings";
 @import "./components/panels";
+@import "./components/sidebar";
 @import "./components/text";
+@import "./components/widths";
 
-
-// bootstrap carousel
-@import "~bootstrap/scss/variables";
-
-
+// bootstrap 
 //mixins
 @import "~bootstrap/scss/mixins/border-radius";
 @import "~bootstrap/scss/mixins/breakpoints";

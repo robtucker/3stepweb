@@ -93,3 +93,19 @@ $img-panel-height: 350px;
 .img-hackathon {
     @include bg-img(url(../assets/img/hackathon2.png), contain, 349px)
 }
+
+
+.img-drinks {
+    @include bg-img(url(../assets/showcase/drinkz.png), contain, $img-panel-height)
+}
+
+.img-flofunder1 {
+    @include bg-img(url(../assets/showcase/flofunder-home.jpg), contain, $img-panel-height)
+}
+
+.img-flofunder2 {
+    @include bg-img(url(../assets/showcase/flofunder-architecture.png), cover, $img-panel-height)
+    
+}
+
+
