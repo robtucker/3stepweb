@@ -114,3 +114,12 @@ $img-panel-height: 350px;
 .img-readwave2 {
     @include bg-img(url(../assets/showcase/readwave-editor.jpg), cover, $img-panel-height)
 }
+
+.img-veea1 {
+    @include bg-img(url(../assets/showcase/veea-art.jpeg), contain, 270px); 
+}
+
+.img-veea2 {
+    @include bg-img(url(../assets/showcase/veea-screens.jpeg), cover, $img-panel-height);
+    background-position: top center;
+}

@@ -47,7 +47,7 @@ module.exports.WEBPACK_CONFIG = {
                 loader: extractSASS.extract(['css','sass']) 
             },
             {
-                test: /\.(jpg|png|gif)$/,
+                test: /\.(jpg|png|jpeg|gif)$/,
                 loader: 'file'
             },
             {
