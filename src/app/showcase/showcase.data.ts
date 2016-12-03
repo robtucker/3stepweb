@@ -73,8 +73,7 @@ export const SHOWCASES: Showcase[] = [
         location: 'Stockholm',
         sector: 'Hospitality',
         type: 'Backend Infrastructure',
-        description: `ReadWave is a writing community which allows users to share 3 minute stories, 
-            enter writing competitions and discuss their stories.`,
+        description: `VEEA is a guestlist management app used by many of the top night clubs in Sweden.`,
         problem: `After the successful launch of Drinkz, we were asked to develop the backend 
             solution for the VEEA MVP app.`,
         solution: `Using the core REST api software from the DrinkZ project, we built a new 
